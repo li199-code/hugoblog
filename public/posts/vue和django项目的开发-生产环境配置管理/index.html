@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.119.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>vue和django项目的开发/生产环境配置管理 &middot; JasonLee</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://blog.jasonleehere.com/"><h1>JasonLee</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://blog.jasonleehere.com/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2023. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>vue和django项目的开发/生产环境配置管理</h1>
+  <time datetime=2023-06-26T22:33:30Z class="post-date">Mon, Jun 26, 2023</time>
+  <h2 id="前言">前言</h2>
+<p>虽然教程作者提到了一些分开管理两种环境的做法，但是我这边没有形成完整可复制的做法。借助chatgpt，将收获整理出来。</p>
+<h2 id="vuejs">vuejs</h2>
+<p>在项目的根目录下，分别创建两个文件：<code>.env.development</code> and <code>.env.production</code>。最基础的设置是api地址：</p>
+<pre tabindex="0"><code># .env.development
+VITE_API_URL=http://dev-api.example.com
+
+# .env.production
+VITE_API_URL=http://api.example.com
+</code></pre><p>任何设置都有以VITE_开头。为了区别使用配置，在<code>vite.config.js</code>中，有如下：</p>
+<pre tabindex="0"><code>export default defineConfig({
+  // 开发环境使用 .env.development 文件
+  envDir: &#39;./&#39;,
+  build: {
+    // 生产环境使用 .env.production 文件
+    envFile: &#39;.env.production&#39;,
+  },
+});
+</code></pre><h2 id="django">django</h2>
+<p>相对于vue, django的设置就要复杂一些了。这里把gpt关于生产和开发环境的不同列出来，虽然有很多在这个项目没有实现，但是可以为以后更复杂的真实项目做参考。</p>
+<blockquote>
+<p>在 Django 项目中，开发环境和生产环境通常需要进行不同的设置。下面是一些常见的设置差异：</p>
+<p>调试模式（Debug Mode）：</p>
+<p>开发环境：设置 DEBUG = True，以便在出现错误时显示详细的错误信息。
+生产环境：设置 DEBUG = False，以避免显示敏感信息和详细的错误信息。
+数据库设置：</p>
+<p>开发环境：通常使用本地数据库（如 SQLite）进行开发和测试。
+生产环境：使用更稳定和可靠的数据库服务器（如 PostgreSQL、MySQL、Oracle）。
+静态文件设置：</p>
+<p>开发环境：通常将静态文件存储在本地，并通过 Django 的 staticfiles 应用程序来提供静态文件服务。
+生产环境：可以使用 CDN（内容分发网络）来提供静态文件，以减轻服务器负载并提高速度。
+日志设置：</p>
+<p>开发环境：可以设置较详细的日志记录级别，以便更容易调试和跟踪问题。
+生产环境：通常使用更严格的日志记录级别，并将日志信息定向到适当的日志文件，以便进行监视和故障排除。
+密钥和敏感信息：</p>
+<p>开发环境：可以在本地设置中直接存储密钥和敏感信息。
+生产环境：建议使用环境变量或其他安全的方式来存储密钥和敏感信息，以保护生产环境的安全性。
+域名设置：</p>
+<p>开发环境：可以使用本地的开发服务器（如 localhost）进行开发和测试。
+生产环境：设置正确的域名，并配置 Web 服务器（如 Nginx 或 Apache）以将请求转发到 Django 应用程序。
+缓存设置：</p>
+<p>开发环境：可以禁用缓存或使用简单的缓存配置，以方便开发和调试。
+生产环境：使用更高效的缓存后端（如 Memcached 或 Redis）来提高性能。
+这些只是一些常见的设置差异，实际上还可以根据项目需求和部署环境的要求进行更多的设置和调整。</p>
+</blockquote>
+<p>本项目中，在根目录下创建了三个文件，<code>settings_common.py</code>, <code>settings_dev.py</code>, <code>settings_prod.py</code>。其中common是两种环境之间共享的通用配置，然后在dev和prod中分别引用common:</p>
+<pre tabindex="0"><code>from .settings_common import *
+</code></pre><p>然后在dev和prod各自写一些配置（比如数据库等）。之后修改启动文件<code>manage.py</code>:</p>
+<pre tabindex="0"><code>import os
+import sys
+
+if os.environ.get(&#39;DJANGO_ENV&#39;) == &#39;production&#39;:
+    os.environ.setdefault(&#39;DJANGO_SETTINGS_MODULE&#39;, &#39;your_project.settings_prod&#39;)
+else:
+    os.environ.setdefault(&#39;DJANGO_SETTINGS_MODULE&#39;, &#39;your_project.settings_dev&#39;)
+
+def main():
+    # 启动逻辑...
+
+if __name__ == &#39;__main__&#39;:
+    main()
+</code></pre><p>如果要部署，记得把环境变量添加上，即设置 DJANGO_ENV 环境变量为 &lsquo;production&rsquo;. 而且如果是uwsgi作为django的服务器的话，还有修改<code>wsgi.py</code>。</p>
+<h2 id="总结">总结</h2>
+<p>前端vue的环境区别很简单，后端django的稍复杂些。主要分三步走：编写配置文件-&gt;修改启动文件-&gt;部署设置环境变量。</p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

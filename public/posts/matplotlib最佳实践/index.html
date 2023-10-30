@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.119.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>matplotlib最佳实践 &middot; JasonLee</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://blog.jasonleehere.com/"><h1>JasonLee</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://blog.jasonleehere.com/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2023. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>matplotlib最佳实践</h1>
+  <time datetime=2023-04-21T14:25:44Z class="post-date">Fri, Apr 21, 2023</time>
+  <h2 id="前言">前言</h2>
+<p>跟着油管上的<a href="https://www.youtube.com/watch?v=UO98lJQ3QGI&amp;list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_&amp;ab_channel=CoreySchafer">教程</a>学的，作者介绍了一些最佳实践，融合一些自己的思考，把觉得有用的东西记录一下。</p>
+<h2 id="part1-折线图">part1 折线图</h2>
+<pre tabindex="0"><code># 导包区
+from matplotlib import pyplot as plt
+# plt.style.use(&#39;seaborn&#39;) # 切换图片风格
+plt.xkcd() # 手绘风格
+
+# 数据区
+ages_x = [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+dev_y = [38496, 42000, 46752, 49320, 53200,
+         56000, 62316, 64928, 67317, 68748, 73752]
+py_dev_y = [45372, 48876, 53850, 57287, 63016,
+            65998, 70003, 70000, 71496, 75370, 83640]
+
+# 绘图区
+plt.plot(ages_x, dev_y, color=&#39;k&#39;, linestyle=&#39;--&#39;, label=&#39;All Devs&#39;)
+plt.plot(ages_x, py_dev_y, color=&#39;b&#39;,marker=&#39;o&#39;, label=&#39;Python Devs&#39;)
+
+plt.xlabel(&#39;Ages&#39;)
+plt.ylabel(&#39;Median Salary&#39;)
+plt.title(&#39;Median Salary By Age&#39;)
+plt.legend()
+
+plt.grid(True)
+
+plt.show()
+</code></pre><p>plot.plot()函数，一个对应一条曲线，而且，color, linestyle, marker单独作为参数写，而不是混在一起；还有，把图例放在plot函数里而不是legend()，都是为了增加可读性。</p>
+<h2 id="part2-柱状图">part2 柱状图</h2>
+<p>画柱状图的函数是plt.bar()。但是如果将上述的plt.plot()改成plt.bar()，会出现重叠的情况。为了避免重叠，需要添加偏移。</p>
+<pre tabindex="0"><code>ages_x = [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+dev_y = [38496, 42000, 46752, 49320, 53200,
+         56000, 62316, 64928, 67317, 68748, 73752]
+py_dev_y = [45372, 48876, 53850, 57287, 63016,
+            65998, 70003, 70000, 71496, 75370, 83640]
+js_dev_y = [37810, 43515, 46823, 49293, 53437,
+            56373, 62375, 66674, 68745, 68746, 74583]
+
+x_indexes = np.arange(len(ages_x))
+width=0.25
+</code></pre><p>width是柱的宽度，柱的数量*width应该小等于1。</p>
+<pre tabindex="0"><code>plt.bar(x_indexes-width, dev_y, color=&#39;k&#39;, width=width, label=&#39;All Devs&#39;)
+plt.bar(x_indexes, py_dev_y, color=&#39;b&#39;, width=width, label=&#39;Python Devs&#39;)
+plt.bar(x_indexes+width, js_dev_y, color=&#39;g&#39;,width=width, label=&#39;JavaScript Devs&#39;)
+</code></pre><p><img src="https://fastly.jsdelivr.net/gh/li199-code/blog-imgs@main/16820744899401682074489216.png" alt=""></p>
+<p>紧接着，作者给出了一个实例，从csv文件读取数据，并统计各个编程语言的使用人数。用的是python标准csv库进行读取，后续可以用pandas。</p>
+<pre tabindex="0"><code>with open(&#39;data.csv&#39;) as csv_file:
+    csv_reader = csv.DictReader(csv_file)
+    counter = Counter()
+    
+    for row in csv_reader:
+        counter.update(row[&#39;LanguagesWorkedWith&#39;].split(&#39;;&#39;))
+    
+print(counter)
+with open(&#39;data.csv&#39;) as csv_file:
+    csv_reader = csv.DictReader(csv_file)
+    counter = Counter()
+    
+    for row in csv_reader:
+        counter.update(row[&#39;LanguagesWorkedWith&#39;].split(&#39;;&#39;))
+    
+print(counter)
+
+Counter({&#39;JavaScript&#39;: 59219, &#39;HTML/CSS&#39;: 55466, &#39;SQL&#39;: 47544, &#39;Python&#39;: 36443, &#39;Java&#39;: 35917, &#39;Bash/Shell/PowerShell&#39;: 31991, &#39;C#&#39;: 27097, &#39;PHP&#39;: 23030, &#39;C++&#39;: 20524, &#39;TypeScript&#39;: 18523, &#39;C&#39;: 18017, &#39;Other(s):&#39;: 7920, &#39;Ruby&#39;: 7331, &#39;Go&#39;: 7201, &#39;Assembly&#39;: 5833, &#39;Swift&#39;: 5744, &#39;Kotlin&#39;: 5620, &#39;R&#39;: 5048, &#39;VBA&#39;: 4781, &#39;Objective-C&#39;: 4191, &#39;Scala&#39;: 3309, &#39;Rust&#39;: 2794, &#39;Dart&#39;: 1683, &#39;Elixir&#39;: 1260, &#39;Clojure&#39;: 1254, &#39;WebAssembly&#39;: 1015, &#39;F#&#39;: 973, &#39;Erlang&#39;: 777})
+</code></pre><p>画图用bar函数的话，x轴就会很拥挤。所以采用横柱状图plt.barh()，将x，y颠倒。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/li199-code/blog-imgs@main/16820748929351682074891976.png" alt=""></p>
+<h2 id="part3-饼状图">part3 饼状图</h2>
+<p>饼状图一般适合五种以下的数据展示。</p>
+<pre tabindex="0"><code>slices = [59219, 55466, 47544, 36443, 35917]
+labels = [&#39;JavaScript&#39;, &#39;HTML/CSS&#39;, &#39;SQL&#39;, &#39;Python&#39;, &#39;Java&#39;]
+explode = [0, 0, 0, 0.1, 0]
+
+plt.pie(slices, labels=labels, explode=explode,startangle=90, autopct=&#39;%1.1f%%&#39;, wedgeprops={&#39;edgecolor&#39;: &#39;black&#39;})
+
+## wedgeprops: 楔子属性？反正就是设置图表的一些性质
+
+plt.title(&#39;My Awesome Pie Chart&#39;)
+plt.show()
+</code></pre><p><img src="https://fastly.jsdelivr.net/gh/li199-code/blog-imgs@main/16820787849411682078784535.png" alt=""></p>
+<h2 id="part4-堆积面积图">part4 堆积面积图</h2>
+<p>堆积面积是stackplot的直译，但似乎不是很妥当？api是plt.stackplot()</p>
+<p><img src="https://fastly.jsdelivr.net/gh/li199-code/blog-imgs@main/16821263319421682126331749.png" alt=""></p>
+<h2 id="part5-折现填充图">part5 折现填充图</h2>
+<p>在折现的上方或下方进行填充，直观地表示差距。</p>
+<pre tabindex="0"><code>plt.plot(ages, py_salaries, label=&#39;Python&#39;)
+</code></pre><p><img src="https://fastly.jsdelivr.net/gh/li199-code/blog-imgs@main/16821275949341682127594019.png" alt=""></p>
+<h2 id="part6-直方图">part6 直方图</h2>
+<p>bins是每根柱代表的数据间距, log表示将数据取对数</p>
+<pre tabindex="0"><code>plt.hist(ages, bins=bins, edgecolor=&#39;black&#39;, log=True)
+</code></pre><p><img src="https://fastly.jsdelivr.net/gh/li199-code/blog-imgs@main/16821444843081682144484185.png" alt=""></p>
+<h2 id="part7-散点图">part7 散点图</h2>
+<pre tabindex="0"><code>plt.scatter(views, likes, c=ratio, cmap=&#39;summer&#39;, edgecolor=&#39;black&#39;, linewidth=1, alpha=0.75)
+cbar = plt.colorbar()
+cbar.set_label(&#39;Like/Dislike Ratio&#39;)
+
+plt.xscale(&#39;log&#39;)
+plt.yscale(&#39;log&#39;)
+
+plt.title(&#39;Median Salary By Age&#39;)
+plt.xlabel(&#39;View Count&#39;)
+plt.ylabel(&#39;Total Likes&#39;)
+plt.show()
+</code></pre><p>c是指颜色的深浅度，cmap设置颜色的系列，plt.colorbar()在图中添加彩色条，plt.xscale(&rsquo;log&rsquo;)将刻度改为对数，防止过大的数远离图表中心。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/li199-code/blog-imgs@main/16821519242431682151923660.png" alt=""></p>
+<h2 id="part8-时序图">part8 时序图</h2>
+<pre tabindex="0"><code>data[&#39;Date&#39;] = pd.to_datetime(data[&#39;Date&#39;]) ##把字符串解析为日期格式
+data.sort_values(&#39;Date&#39;, inplace=True)
+
+price_date = data[&#39;Date&#39;]
+price_close = data[&#39;Close&#39;]
+
+plt.plot_date(price_date, price_close, linestyle=&#39;solid&#39;)
+
+plt.gcf().autofmt_xdate() ## 自动格式化日期
+</code></pre><p><img src="https://fastly.jsdelivr.net/gh/li199-code/blog-imgs@main/16821546612471682154660773.png" alt=""></p>
+<h2 id="part9-动画">part9 动画</h2>
+<p>这是和深度学习相关的一个场景，比如损失函数的显示就是动态的。</p>
+<pre tabindex="0"><code>
+import random
+from itertools import count
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+
+plt.style.use(&#39;fivethirtyeight&#39;)
+
+x_vals = []
+y_vals = []
+
+# plt.plot(x_vals, y_vals)
+
+
+index = count()
+
+def animate(i):
+    x_vals.append(next(index))
+    y_vals.append(random.randint(0, 5))
+
+    plt.cla()
+    plt.plot(x_vals, y_vals)
+
+ani = FuncAnimation(plt.gcf(), animate, interval=1000)
+plt.tight_layout()
+plt.show()
+</code></pre><p>但是上述代码在jupyter中无法正常运行，只能用pycharm来输出。</p>
+<h2 id="part10-子图">part10 子图</h2>
+<pre tabindex="0"><code>plt.style.use(&#39;seaborn&#39;)
+
+data = pd.read_csv(&#39;data.csv&#39;)
+ages = data[&#39;Age&#39;]
+dev_salaries = data[&#39;All_Devs&#39;]
+py_salaries = data[&#39;Python&#39;]
+js_salaries = data[&#39;JavaScript&#39;]
+
+fig1, ax1 = plt.subplots()
+fig2, ax2 = plt.subplots()
+
+ax1.plot(ages, dev_salaries, color=&#39;#444444&#39;,
+         linestyle=&#39;--&#39;, label=&#39;All Devs&#39;)
+
+ax2.plot(ages, py_salaries, label=&#39;Python&#39;)
+ax2.plot(ages, js_salaries, label=&#39;JavaScript&#39;)
+
+ax1.legend()
+ax1.set_title(&#39;Median Salary (USD) by Age&#39;)
+ax1.set_ylabel(&#39;Median Salary (USD)&#39;)
+
+ax2.legend()
+ax2.set_xlabel(&#39;Ages&#39;)
+ax2.set_ylabel(&#39;Median Salary (USD)&#39;)
+
+plt.tight_layout()
+
+plt.show()
+
+fig1.savefig(&#39;fig1.png&#39;)
+fig2.savefig(&#39;fig2.png&#39;)
+</code></pre><p>首先，子图中最重要的概念是figure和axis。之前的代码都是针对figure（默认），figure可以认为是一个容器，表现为窗口；axis就是一张具体的图。</p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

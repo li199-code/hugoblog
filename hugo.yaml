@@ -1,0 +1,6 @@
+baseURL: "http://blog.jasonleehere.com/"
+theme: hyde
+title: JasonLee
+languageCode: zh-CN
+languageName: 简体中文
+hasCJKLanguage: true

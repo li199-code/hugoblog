@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>爬虫 on JasonLee</title>
+    <link>http://blog.jasonleehere.com/tags/%E7%88%AC%E8%99%AB/</link>
+    <description>Recent content in 爬虫 on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 03 Nov 2022 21:26:48 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/tags/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>招聘系统面试状态爬虫</title>
+      <link>http://blog.jasonleehere.com/posts/moka%E6%8B%9B%E8%81%98%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E7%8A%B6%E6%80%81%E7%88%AC%E8%99%AB/</link>
+      <pubDate>Thu, 03 Nov 2022 21:26:48 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/moka%E6%8B%9B%E8%81%98%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E7%8A%B6%E6%80%81%E7%88%AC%E8%99%AB/</guid>
+      <description>这几天学python爬虫，又买了腾讯云服务器，找个项目练练手。找到了一个需求：对招聘进度做一个定时爬取，如果有变化，微信通知我。任务可以分为</description>
+    </item>
+    
+    <item>
+      <title>https协议</title>
+      <link>http://blog.jasonleehere.com/posts/https%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Mon, 31 Oct 2022 15:42:50 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/https%E5%8D%8F%E8%AE%AE/</guid>
+      <description>什么是公钥和私钥 为了增加http报文内容的安全性，需要对明文加密。公钥是一种加密规则，由服务器端创建，经过证书认证机构签名后发给客户端，客户</description>
+    </item>
+    
+  </channel>
+</rss>

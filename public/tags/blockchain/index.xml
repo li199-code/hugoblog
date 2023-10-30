@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blockchain on JasonLee</title>
+    <link>http://blog.jasonleehere.com/tags/blockchain/</link>
+    <description>Recent content in blockchain on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 08 Nov 2022 12:26:30 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我对区块链学习过程的记录</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
+      <pubDate>Tue, 08 Nov 2022 12:26:30 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%8C%BA%E5%9D%97%E9%93%BE/</guid>
+      <description>从抽象到具体，从为什么创立区块链，到技术层面。一个掺杂我个人思考的记录。 为什么创立区块链？ 自由世界人民对自由更进一步的追求，用技术天然的可靠</description>
+    </item>
+    
+  </channel>
+</rss>

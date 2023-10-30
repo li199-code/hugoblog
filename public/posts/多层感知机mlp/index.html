@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.119.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>多层感知机（MLP) &middot; JasonLee</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://blog.jasonleehere.com/"><h1>JasonLee</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://blog.jasonleehere.com/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2023. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>多层感知机（MLP)</h1>
+  <time datetime=2023-03-25T14:59:43Z class="post-date">Sat, Mar 25, 2023</time>
+  <p>终于从前面的单层网络linear-regression和softmax过渡到多层神经网络了。为了对更加复杂的数据进行学习，多层感知机将多个全连接层叠加，并增加激活函数。激活函数是非线性的，因为如果不加激活函数或者激活函数线性，那么多层神经网络还是遵循线性规律，等同于一层。</p>
+<p><img src="https://files.catbox.moe/i5059a.png" alt="多层感知机"></p>
+<p>中间的，就是隐藏层。所以，多加的隐藏层中神经元的个数也是一个超参数。</p>
+<h2 id="从零实现代码">从零实现代码</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> d2l <span style="color:#f92672">import</span> torch <span style="color:#66d9ef">as</span> d2l
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">256</span>
+</span></span><span style="display:flex;"><span>train_iter, test_iter <span style="color:#f92672">=</span> d2l<span style="color:#f92672">.</span>load_data_fashion_mnist(batch_size)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>num_inputs, num_outputs, num_hiddens <span style="color:#f92672">=</span> <span style="color:#ae81ff">784</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">784</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>W1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Parameter(torch<span style="color:#f92672">.</span>randn(num_inputs, num_hiddens, requires_grad<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.01</span>)
+</span></span><span style="display:flex;"><span>b1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Parameter(torch<span style="color:#f92672">.</span>zeros(num_hiddens, requires_grad<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>))
+</span></span><span style="display:flex;"><span>W2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Parameter(torch<span style="color:#f92672">.</span>randn(num_hiddens, num_outputs, requires_grad<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.01</span>)
+</span></span><span style="display:flex;"><span>b2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Parameter(torch<span style="color:#f92672">.</span>zeros(num_outputs, requires_grad<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>params <span style="color:#f92672">=</span> [W1, b1, W2, b2]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">relu</span>(X):
+</span></span><span style="display:flex;"><span>    a <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>zeros_like(X)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> torch<span style="color:#f92672">.</span>max(X, a)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">net</span>(X):
+</span></span><span style="display:flex;"><span>    X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>reshape((<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, num_inputs))
+</span></span><span style="display:flex;"><span>    H <span style="color:#f92672">=</span> relu(X<span style="color:#a6e22e">@W1</span> <span style="color:#f92672">+</span> b1)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (H<span style="color:#a6e22e">@W2</span> <span style="color:#f92672">+</span> b2)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>loss <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>CrossEntropyLoss(reduction<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;none&#39;</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>num_epochs, lr <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">0.1</span>
+</span></span><span style="display:flex;"><span>updater <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>optim<span style="color:#f92672">.</span>SGD(params, lr<span style="color:#f92672">=</span>lr)
+</span></span><span style="display:flex;"><span>d2l<span style="color:#f92672">.</span>train_ch3(net, train_iter, test_iter, loss, num_epochs, updater)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>d2l<span style="color:#f92672">.</span>predict_ch3(net, test_iter, n<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+</span></span></code></pre></div><h2 id="利用pytorch-api实现">利用pytorch api实现</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> d2l <span style="color:#f92672">import</span> torch <span style="color:#66d9ef">as</span> d2l
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">## 网络搭建</span>
+</span></span><span style="display:flex;"><span>net <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sequential(nn<span style="color:#f92672">.</span>Flatten(),
+</span></span><span style="display:flex;"><span>                   nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">784</span>, <span style="color:#ae81ff">256</span>),
+</span></span><span style="display:flex;"><span>                   nn<span style="color:#f92672">.</span>ReLU(),
+</span></span><span style="display:flex;"><span>                   nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">256</span>, <span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 初始化权重</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">init_weights</span>(m):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> type(m)<span style="color:#f92672">==</span>nn<span style="color:#f92672">.</span>Linear:
+</span></span><span style="display:flex;"><span>        nn<span style="color:#f92672">.</span>init<span style="color:#f92672">.</span>normal_(m<span style="color:#f92672">.</span>weight, std<span style="color:#f92672">=</span><span style="color:#ae81ff">0.01</span>)
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>net<span style="color:#f92672">.</span>apply(init_weights);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">## 超参数设置</span>
+</span></span><span style="display:flex;"><span>batch_size, lr, num_epochs <span style="color:#f92672">=</span> <span style="color:#ae81ff">256</span>, <span style="color:#ae81ff">0.1</span>, <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 损失函数</span>
+</span></span><span style="display:flex;"><span>loss <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>CrossEntropyLoss(reduction<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;none&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 优化器</span>
+</span></span><span style="display:flex;"><span>trainer <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>optim<span style="color:#f92672">.</span>SGD(net<span style="color:#f92672">.</span>parameters(), lr<span style="color:#f92672">=</span>lr)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">## 加载数据（dataloader）</span>
+</span></span><span style="display:flex;"><span>train_iter, test_iter <span style="color:#f92672">=</span> d2l<span style="color:#f92672">.</span>load_data_fashion_mnist(batch_size)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 正式训练</span>
+</span></span><span style="display:flex;"><span>d2l<span style="color:#f92672">.</span>train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
+</span></span></code></pre></div><h2 id="总结">总结</h2>
+<p>深度学习代码编写步骤：</p>
+<p>网络搭建-》初始化权重-》超参数设置-》损失函数-》优化器-》加载数据-》正式训练</p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nodejs on JasonLee</title>
+    <link>http://blog.jasonleehere.com/tags/nodejs/</link>
+    <description>Recent content in nodejs on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 27 Jul 2022 21:31:25 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nodejs构建服务器</title>
+      <link>http://blog.jasonleehere.com/posts/nodejs%E6%9E%84%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <pubDate>Wed, 27 Jul 2022 21:31:25 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/nodejs%E6%9E%84%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description>&lt;h2 id=&#34;从nodejs服务器想到的&#34;&gt;从nodejs服务器想到的&lt;/h2&gt;
+&lt;p&gt;服务器的定义是，监听请求，处理请求和做出响应。除了nodejs外，其他语言也有对应的web server框架，比如java的tomcat。&lt;/p&gt;
+&lt;p&gt;用下列代码实现一个简单的服务器：&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

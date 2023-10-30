@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>matplotlib on JasonLee</title>
+    <link>http://blog.jasonleehere.com/tags/matplotlib/</link>
+    <description>Recent content in matplotlib on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 21 Apr 2023 14:25:44 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/tags/matplotlib/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>matplotlib最佳实践</title>
+      <link>http://blog.jasonleehere.com/posts/matplotlib%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Fri, 21 Apr 2023 14:25:44 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/matplotlib%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
+      <description>前言 跟着油管上的教程学的，作者介绍了一些最佳实践，融合一些自己的思考，把觉得有用的东西记录一下。 part1 折线图 # 导包区 from matplotlib import pyplot as plt # plt.style.use(&amp;#39;seaborn&amp;#39;) # 切换图片风</description>
+    </item>
+    
+  </channel>
+</rss>

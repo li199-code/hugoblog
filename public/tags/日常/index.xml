@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>日常 on JasonLee</title>
+    <link>http://blog.jasonleehere.com/tags/%E6%97%A5%E5%B8%B8/</link>
+    <description>Recent content in 日常 on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 11 Oct 2023 14:37:37 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/tags/%E6%97%A5%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>工作中的一些工具使用技巧和方法论</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E5%92%8C%E6%96%B9%E6%B3%95%E8%AE%BA/</link>
+      <pubDate>Wed, 11 Oct 2023 14:37:37 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E5%92%8C%E6%96%B9%E6%B3%95%E8%AE%BA/</guid>
+      <description>我的工作是后端开发，这几天的内容就是做一套增删改查接口，暂时还没涉及复杂的逻辑。之前在外包里面搞前端，工具就两个：vscode 和浏览器。现在</description>
+    </item>
+    
+  </channel>
+</rss>

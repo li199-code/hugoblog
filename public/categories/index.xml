@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on JasonLee</title>
+    <link>http://blog.jasonleehere.com/categories/</link>
+    <description>Recent content in Categories on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 28 Oct 2023 20:34:28 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python 机器学习</title>
+      <link>http://blog.jasonleehere.com/categories/python-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sat, 28 Oct 2023 20:34:28 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/categories/python-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>投资知识和实操</title>
+      <link>http://blog.jasonleehere.com/categories/%E6%8A%95%E8%B5%84%E7%9F%A5%E8%AF%86%E5%92%8C%E5%AE%9E%E6%93%8D/</link>
+      <pubDate>Thu, 19 Oct 2023 15:22:44 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/categories/%E6%8A%95%E8%B5%84%E7%9F%A5%E8%AF%86%E5%92%8C%E5%AE%9E%E6%93%8D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>全栈项目wey</title>
+      <link>http://blog.jasonleehere.com/categories/%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AEwey/</link>
+      <pubDate>Sun, 16 Jul 2023 22:22:21 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/categories/%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AEwey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>润学心经</title>
+      <link>http://blog.jasonleehere.com/categories/%E6%B6%A6%E5%AD%A6%E5%BF%83%E7%BB%8F/</link>
+      <pubDate>Tue, 13 Jun 2023 14:57:13 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/categories/%E6%B6%A6%E5%AD%A6%E5%BF%83%E7%BB%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>动手pytorch</title>
+      <link>http://blog.jasonleehere.com/categories/%E5%8A%A8%E6%89%8Bpytorch/</link>
+      <pubDate>Tue, 06 Jun 2023 19:46:55 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/categories/%E5%8A%A8%E6%89%8Bpytorch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>硕士论文</title>
+      <link>http://blog.jasonleehere.com/categories/%E7%A1%95%E5%A3%AB%E8%AE%BA%E6%96%87/</link>
+      <pubDate>Thu, 20 Apr 2023 10:34:27 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/categories/%E7%A1%95%E5%A3%AB%E8%AE%BA%E6%96%87/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

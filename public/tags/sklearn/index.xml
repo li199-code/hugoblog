@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sklearn on JasonLee</title>
+    <link>http://blog.jasonleehere.com/tags/sklearn/</link>
+    <description>Recent content in sklearn on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 24 Sep 2023 23:06:24 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/tags/sklearn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>sklearn crash course</title>
+      <link>http://blog.jasonleehere.com/posts/sklearn-crash-course/</link>
+      <pubDate>Sun, 24 Sep 2023 23:06:24 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/sklearn-crash-course/</guid>
+      <description>前言 油管视频教程。想到哪儿写到哪儿。 如何让 jupyter notebook 切换到 venv 环境 参考链接 首先在虚拟环境下的 cmd 中运行： pip install ipykernel 然后，在在虚环境中将当前的虚拟环境添加到</description>
+    </item>
+    
+  </channel>
+</rss>

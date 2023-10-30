@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.119.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>pdf转word &middot; JasonLee</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://blog.jasonleehere.com/"><h1>JasonLee</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://blog.jasonleehere.com/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2023. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>pdf转word</h1>
+  <time datetime=2023-04-14T19:35:26Z class="post-date">Fri, Apr 14, 2023</time>
+  <h2 id="问题描述">问题描述</h2>
+<p>学校的系统要求同时上交pdf和word版本的论文。latex写的只能生成pdf，就有了转word需求。通过搜索，先后尝试了pandoc的tex2docx（可以生成，但是格式太简陋），adobe的在线pdf转word（总体美观，但是公式识别失败）。最后，还是选择了adobe acrobat DC本地将pdf转成word，并结合axmath的word插件，输入公式。</p>
+<h2 id="acrobat-dc的使用">acrobat DC的使用</h2>
+<p>当初本科时候就装了这个软件。用它输出word有两种模式：
+<img src="https://fastly.jsdelivr.net/gh/li199-code/blog-imgs@main/16814725700571681472569208.png" alt=""></p>
+<p>保持流动顺序和保持页面布局。其中，保持流动顺序是让段落顺序和pdf一样，转换结果的总页数和pdf可能不一致；而保持页面布局是强行让文字位置和pdf一样，但是丧失了可编辑性。因为后面还要加公式，所以选择第一种，同时也是默认模式。</p>
+<p>初步转换后，大概比pdf多了七八页。有很多是空白导致的。现在的word很粗糙，里面很多隐藏的分割符，加上word各种隐藏bug，所以要耐心。</p>
+<h3 id="页码和目录">页码和目录</h3>
+<p>学校要求是绪论之前（不包括封面）用罗马数字，绪论之后的正文用阿拉伯数字。把绪论之前编为一节，且每一页指定好页码样式，链接到前一节，这样才能自动编号。在绪论第一页开始新的一节，这样就从1开始编号了。页码和目录关系很大。这时候更新一下目录，也包括了绪论之前的内容。只能手动删除掉了。</p>
+<h3 id="样式管理">样式管理</h3>
+<p>来到文字编辑部分。acrobat会把文档的标题字体给改了，而且正文段落的缩进还各不相同。如果每一段都设置太麻烦了。所以，从“样式”选项卡修改，可以一劳永逸。首先，选择某个样式的文字，点开样式的修改选项卡，如图：
+<img src="https://fastly.jsdelivr.net/gh/li199-code/blog-imgs@main/16814736786221681473678101.png" alt=""></p>
+<p>然后，设置好字体和段落，比如宋体、两端对齐，去除缩进等。勾上自动更新，然后相同样式的所有文字都会应用。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/li199-code/blog-imgs@main/16814737966141681473796057.png" alt=""></p>
+<p>注意这个自动更新，如果后面你想对一些格式微调，那么自动更新会让你的微调作用于全局，所以，建议初步改完后，关掉自动更新。完成这一步后，文档大致美观了。</p>
+<h3 id="公式输入">公式输入</h3>
+<p>现在市面上所有的pdf转word工具，识别公式的能力都很垃圾。大致排序就是adobe在线&gt;acrobat&gt;其他。adobe也只能识别一些简单的公式，遇到稍微复杂的也是乱码。mathpix是图片转latex的最强工具，识别率非常高，但是收费。我研一时候，买了axmath，类似于mathtype，但是功能更丰富，可以将latex转为word公式。把overleaf的公式复制过来，开一个行内公式，粘贴，整理好格式。删空格会碰到很多奇怪的东西，只要多保存，前后试一试，一般都能解决。</p>
+<h2 id="更新">更新</h2>
+<p>axmath在将latex公式转为word格式时，会导致文档其他部分出现空白。非常恶心！</p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

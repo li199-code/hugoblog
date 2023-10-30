@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.119.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Docker入门 &middot; JasonLee</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://blog.jasonleehere.com/"><h1>JasonLee</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://blog.jasonleehere.com/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2023. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Docker入门</h1>
+  <time datetime=2023-01-31T11:15:33Z class="post-date">Tue, Jan 31, 2023</time>
+  <p>公司的项目是用 docker 来部署的。之前看过一个 docker 科普视频，还没有动手实践过。现在将查到的东西做一个梳理（windows 平台）。</p>
+<h1 id="docker-基本概念">docker 基本概念</h1>
+<p>docker 可以理解为一个简易的虚拟机，它去掉了一个完整操作系统中不需要的部分，仅保留能让应用程序（mysql, jvm, php）等运行起来的环境。它让代码项目可以极其方便地部署在不同的机器上。docker 有以下三个主要文件：</p>
+<ul>
+<li>DockerFile 描述了如何创建 image 文件及其基本信息</li>
+<li>image 文件 环境的完整信息，类似于 windows 安装时的 iso 文件，便携，可以发布到公共空间供他人下载。</li>
+<li>container 容器，本机系统上的一个进程，将自身与外部操作系统隔离。</li>
+</ul>
+<h1 id="docker-使用方式">docker 使用方式</h1>
+<p>让我们从 DockerFile 开始。首先编写 dockerignore 文件，忽视某些文件和文件夹，使之不要打包进 image 文件。是不是很类似于 gitignore？是的，image 文件就可类比 git 工作区，可以提交到 dockerhub，一个 image 文件托管平台。然后，编写 DockerFile。它无后缀，可以像下面这样写：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-DockerFile" data-lang="DockerFile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> node:8.4</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . /app<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /app</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> npm install --register<span style="color:#f92672">=</span>https://register.npm.taobao.com<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 3000</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>注意，RUN npm install 是在制作 image 文件阶段执行的，说明 npm 包会打包进 image 文件。</p>
+<p>有了 DockerFile，就可以创建 image 文件。</p>
+<pre tabindex="0"><code>docker build -t koa-demo .
+</code></pre><p><code>-t</code>指定 image 文件的别名，不然就是一串哈希字符。注意最后有一个点，表示 dockerfile 就在当前路径。运行后，新生成的 image 文件存在 windows 下的 <code>C:\Users\${用户名}\AppData\Local\Docker\wsl\data\ext4.vhdx</code>. 但是，要看是否创建成功，指令 <code>docker image ls。</code></p>
+<p>有了 image 文件，可以正式创建容器：</p>
+<pre tabindex="0"><code>docker run -dp 8000:3000 koa-demo
+</code></pre><p><code>-d</code> detached, 单独模式，在后台运行。<code>-p</code>建立本机和容器端口之间的映射，即本机的 8000 映射到容器的 3000。<code>koa-demo</code>就是容器的别名。</p>
+<p>终止容器，首先运行 <code>docker container ls</code>，获得 id，运行 <code>docker container kill [id]</code>.</p>
+<h1 id="公司项目部署实战">公司项目部署实战</h1>
+<p>公司的 vue 前端项目，部署在私有的 docker 服务器。</p>
+<h2 id="准备工作">准备工作</h2>
+<p>注册 docker 账号，然后配置 docker daemon 文件。</p>
+<h2 id="正式开始">正式开始</h2>
+<p>首先打包项目文件到 dist 目录。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#e6db74">&#34;docker:build&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;cross-var docker build -t dev2.smart-kind.com:18082/docker/$npm_package_name:$npm_package_version --build-arg ppath=$npm_package_name -f Dockerfile dist&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;docker:push&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;cross-var docker push dev2.smart-kind.com:18082/docker/$npm_package_name:$npm_package_version&#34;</span>,
+</span></span></code></pre></div><p><code>yarn docker:build,</code> <code>yarn docker:push</code>将生成的镜像推送到公司服务器。</p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

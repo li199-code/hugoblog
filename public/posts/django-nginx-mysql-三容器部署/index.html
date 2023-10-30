@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.119.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>django&#43;nginx&#43;mysql 三容器部署 &middot; JasonLee</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://blog.jasonleehere.com/"><h1>JasonLee</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://blog.jasonleehere.com/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2023. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>django&#43;nginx&#43;mysql 三容器部署</h1>
+  <time datetime=2023-06-24T17:16:09Z class="post-date">Sat, Jun 24, 2023</time>
+  <h2 id="前言">前言</h2>
+<p>之前的部署直接采用默认的sqlite3作为数据库。因为sqlite3是文件式数据库，所以打造容器时，本地调试过程中的数据记录也被包含进去。另外，生产环境中，不可能使用sqlite。因此，在之前的django+nginx的基础上，引入了mysql容器。</p>
+<h2 id="镜像设置">镜像设置</h2>
+<p>首先在根目录创建一个<code>MySQL</code>数据库，下面有data.sql和Dockerfile。这里我们先单独启动一下mydql容器。这时候mysql容器里已经有django的数据库了（database)。这是因为data.sql已经提前创建好了数据库并设置为当前数据库：</p>
+<pre tabindex="0"><code>CREATE DATABASE IF NOT EXISTS my_database;
+
+USE my_database;
+</code></pre><p>而Dockerfile的内容为：</p>
+<pre tabindex="0"><code>FROM mysql:8
+
+ENV MYSQL_ROOT_PASSWORD pass
+COPY ./data.sql /docker-entrypoint-initdb.d/data.sql
+</code></pre><p>最后一行使得data.sql在容器初始化时就被执行。这时候虽然有了数据库但是没有表格，需要去django项目下，执行<code>python manage.py migrate</code>来在库里面创建表格。运行<code>docker exec -it &lt;name&gt; /bin/bash</code>，进入容器terminal，进入mysql命令行，show tables，可以得到：</p>
+<p><img src="https://fastly.jsdelivr.net/gh/li199-code/blog-imgs@main/16875289399621687528939092.png" alt="16875289399621687528939092.png"></p>
+<p>说明，数据表格创建成功了。</p>
+<h2 id="django-settingspy变动">django settings.py变动</h2>
+<p>由于之前是默认的sqlite3，配置非常简单，只需要指定数据库文件位置。在django的settings.py中，关于mysql数据库的设定为：</p>
+<pre tabindex="0"><code>DATABASES = {
+    &#39;default&#39;: {
+        &#39;ENGINE&#39;: &#39;django.db.backends.mysql&#39;,
+        &#39;NAME&#39;: &#39;my_database&#39;,
+        &#39;HOST&#39;: &#39;database&#39;, #compose中mysql容器的服务名称
+        &#39;PORT&#39;: &#39;3306&#39;,
+        &#39;USER&#39;: &#39;root&#39;,
+        &#39;PASSWORD&#39;: &#39;pass&#39;,
+        &#39;OPTIONS&#39;: {
+            &#39;init_command&#39;: &#34;SET sql_mode=&#39;STRICT_TRANS_TABLES&#39;&#34;  
+        },
+    }
+}
+</code></pre><h2 id="docker-compose">docker-compose</h2>
+<p>由于我们是全docker运行，因此也要实验一下将django项目打包成docker容器后，能否也能与mysql容器通信且成功创建表格。这次用compose实现。</p>
+<pre tabindex="0"><code>version: &#34;3.9&#34;
+services:
+  nginx:
+    build: ./wey-frontend/
+    restart: always
+    ports:
+      - &#34;8000:80&#34;
+    volumes:
+      - web_static:/var/www/mysite/assets/static
+      - web_media:/var/www/mysite/assets/media
+    depends_on: 
+      - django
+
+  django:
+    build: ./wey_backend/
+    restart: always
+    expose:
+      - 8000
+    command: &gt;
+      sh -c &#34;python manage.py collectstatic --noinput 
+      &amp;&amp; python manage.py migrate
+      &amp;&amp; uwsgi --ini uwsgi.ini&#34;
+    volumes:
+      - web_static:/var/www/mysite/assets/static
+      - web_media:/var/www/mysite/assets/media
+    depends_on: 
+      - database
+
+  database:
+    build: ./MySQL/
+    ports:
+      - &#39;3306:3306&#39;
+    # environment:
+    #   MYSQL_DATABASE: &#39;appdb&#39;
+    #   MYSQL_PASSWORD: &#39;root&#39;
+    #   MYSQL_ROOT_PASSWORD: &#39;root&#39;
+    # volumes:
+    #   - &#39;db:/var/lib/mysql&#39;
+    #   # command: [&#39;mysqld&#39;, &#39;--character-set-server=utf8mb4&#39;, &#39;--collation-server=utf8mb4_unicode_ci&#39;]
+
+volumes:
+  web_static:
+  web_media:
+</code></pre><h2 id="总结">总结</h2>
+<p>用mysql作为数据库，更符合实际生产场景。由于一开始mysql容器内没有数据库，因此需要在Dockerfile中创建自定义数据库并且使用。django的settings.py中也要作相应调整。docker-compose中，需要在创建django容器后，执行<code>python manage.py migrate</code>，来迁移数据库（即在自定义数据库中创建表来供上线后数据放置）。</p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.119.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>kafka初体验 &middot; JasonLee</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://blog.jasonleehere.com/"><h1>JasonLee</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://blog.jasonleehere.com/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2023. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>kafka初体验</h1>
+  <time datetime=2023-09-20T09:06:00Z class="post-date">Wed, Sep 20, 2023</time>
+  <h2 id="启动-zookeeper-和-kafka">启动 zookeeper 和 kafka</h2>
+<p>安装参考<a href="https://www.geeksforgeeks.org/how-to-install-and-run-apache-kafka-on-windows/">教程</a>。本机版本是 2.12-3.5.1。</p>
+<p>在启动 kafka 之前先启动 zookeeper：</p>
+<pre tabindex="0"><code>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+</code></pre><p>然后</p>
+<pre tabindex="0"><code>.\bin\windows\kafka-server-start.bat .\config\server.properties
+</code></pre><h2 id="创建-topic">创建 topic</h2>
+<pre tabindex="0"><code>.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --topic my-topic --partitions 3 --replication-factor 1
+</code></pre><p>解释一下参数的含义：</p>
+<ul>
+<li>kafka-topics.bat：用于创建、列出或删除 Kafka 主题的命令。</li>
+<li>create：指示要创建主题。</li>
+<li>bootstrap-server localhost:9092：指定 Kafka 服务器的地址和端口。确保这个地址和端口与你的 Kafka 服务器配置一致。</li>
+<li>topic my-topic：指定要创建的主题名称，你可以将 my-topic 替换为你想要的主题名称。</li>
+<li>partitions 3：指定主题的分区数。你可以根据需要调整分区数。</li>
+<li>replication-factor 1：指定主题的复制因子。在本例中，复制因子为 1，这意味着每个分区只有一个副本。</li>
+</ul>
+<p>列出 kafka 所有 topics，查看是否创建成功：</p>
+<pre tabindex="0"><code>.\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+</code></pre><h2 id="生产者发送消息">生产者发送消息</h2>
+<pre tabindex="0"><code>.\bin\windows\kafka-console-producer.bat --bootstrap-server localhost:9092 --topic my-topic
+</code></pre><ul>
+<li>kafka-console-producer.bat：这是 Kafka 的命令行生产者工具。</li>
+<li>bootstrap-server localhost:9092：指定 Kafka 服务器的地址和端口。确保这个地址和端口与你的 Kafka 服务器配置一致。</li>
+<li>topic your-topic-name：指定你要发送消息的主题名称，请将 your-topic-name 替换为你的实际主题名称。</li>
+</ul>
+<p>运行上述命令后，命令行将进入消息输入模式。你可以在命令行中输入消息，然后按 Enter 键发送它们。当你完成发送消息后，你可以通过键入 Ctrl+C 来退出 Kafka 生产者。</p>
+<h2 id="消费者接受消息">消费者接受消息</h2>
+<pre tabindex="0"><code>.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic my-topic --from-beginning
+</code></pre><ul>
+<li>kafka-console-consumer.bat：这是 Kafka 的命令行消费者工具。</li>
+<li>bootstrap-server localhost:9092：指定 Kafka 服务器的地址和端口。确保这个地址和端口与你的 Kafka 服务器配置一致。</li>
+<li>topic your-topic-name：指定你要消费消息的主题名称，请将 your-topic-name 替换为你的实际主题名称。</li>
+<li>from-beginning：这个选项表示你要从主题的起始位置开始消费消息。如果你希望从当前的消息位置开始消费，可以省略这个选项。</li>
+</ul>
+<p>运行上述命令后，Kafka 消费者将开始消费指定主题中的消息。如果你之前已经在生产者中发送了消息到该主题，那么这些消息将会显示在命令行中。</p>
+<p>你可以在命令行中看到消费的消息，直到你手动停止消费者（通过按 Ctrl+C）或者关闭命令行窗口。</p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

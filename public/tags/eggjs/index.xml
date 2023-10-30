@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>eggjs on JasonLee</title>
+    <link>http://blog.jasonleehere.com/tags/eggjs/</link>
+    <description>Recent content in eggjs on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 29 Sep 2023 12:13:49 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/tags/eggjs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于eggjs, sequelize和pgsql的小需求</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%9F%BA%E4%BA%8Eeggjs-sequelize%E5%92%8Cpgsql%E7%9A%84%E5%B0%8F%E9%9C%80%E6%B1%82/</link>
+      <pubDate>Fri, 29 Sep 2023 12:13:49 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%9F%BA%E4%BA%8Eeggjs-sequelize%E5%92%8Cpgsql%E7%9A%84%E5%B0%8F%E9%9C%80%E6%B1%82/</guid>
+      <description>前言 这是我在部门遇到的第一个小需求。这一次，我写的是后端代码。刚开始，我还陷入在一种思维定式里，似乎一定要在现有项目的工程里添加代码。如果这</description>
+    </item>
+    
+  </channel>
+</rss>

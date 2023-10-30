@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>es6 on JasonLee</title>
+    <link>http://blog.jasonleehere.com/tags/es6/</link>
+    <description>Recent content in es6 on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 02 Feb 2023 15:20:42 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/tags/es6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>javascript import 语法</title>
+      <link>http://blog.jasonleehere.com/posts/javascript-import-%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Thu, 02 Feb 2023 15:20:42 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/javascript-import-%E8%AF%AD%E6%B3%95/</guid>
+      <description>对于前端项目中广泛存在的 import 一直有许多疑问：为什么有的加花括号？为什么有的没有 from？这篇文章对 import 的各种情况做一个覆盖记录。 大部分 import 的都是 e</description>
+    </item>
+    
+  </channel>
+</rss>

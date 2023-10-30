@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>redis on JasonLee</title>
+    <link>http://blog.jasonleehere.com/tags/redis/</link>
+    <description>Recent content in redis on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 10 Aug 2023 10:19:58 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>redis, pgsql远程连接教程</title>
+      <link>http://blog.jasonleehere.com/posts/redis-pgsql%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Thu, 10 Aug 2023 10:19:58 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/redis-pgsql%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%95%99%E7%A8%8B/</guid>
+      <description>前言 部门在云服务器上开了 redis、postgresql 服务，供新员工练手。这就需要远程登录，这里对这两个工具的登录方式做一个记录。 redis 前提是</description>
+    </item>
+    
+  </channel>
+</rss>

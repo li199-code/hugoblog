@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP on JasonLee</title>
+    <link>http://blog.jasonleehere.com/tags/nlp/</link>
+    <description>Recent content in NLP on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 06 Sep 2023 10:54:38 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>文本分类比赛学习记录</title>
+      <link>http://blog.jasonleehere.com/posts/%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB%E6%AF%94%E8%B5%9B%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Wed, 06 Sep 2023 10:54:38 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB%E6%AF%94%E8%B5%9B%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+      <description>前言 本文是我对在公司参加的“ChatGPT 生成文本检测器”比赛。数据集为中文作文样本，其中从互联网上采集得到了真实作文，并且 ChatGLM-6B 生成了部分作文</description>
+    </item>
+    
+  </channel>
+</rss>

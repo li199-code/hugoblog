@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>typescript on JasonLee</title>
+    <link>http://blog.jasonleehere.com/tags/typescript/</link>
+    <description>Recent content in typescript on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 09 Aug 2023 09:43:24 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>typescript文件造成win文件夹卡顿原因及解决方案</title>
+      <link>http://blog.jasonleehere.com/posts/typescript%E6%96%87%E4%BB%B6%E9%80%A0%E6%88%90win%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8D%A1%E9%A1%BF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Wed, 09 Aug 2023 09:43:24 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/typescript%E6%96%87%E4%BB%B6%E9%80%A0%E6%88%90win%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8D%A1%E9%A1%BF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description>写了好几天的 ts 代码，发现打开包含 ts 代码的文件夹时，文件夹会缓慢刷新，而且不是列表形式展示。非常痛苦:( 一开始以为是 windows11 的 bug，后来一想，最开</description>
+    </item>
+    
+    <item>
+      <title>typescript入门记录</title>
+      <link>http://blog.jasonleehere.com/posts/typescript%E5%85%A5%E9%97%A8%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Fri, 04 Aug 2023 09:29:21 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/typescript%E5%85%A5%E9%97%A8%E8%AE%B0%E5%BD%95/</guid>
+      <description>typescript 的工作方式 首先要明白，在 javascript 存在了这么多年的情况下，为什么发明 typescript？js 能运行一些非常奇葩的代码，比如: console.log(1+&amp;#39;1&amp;#39;) //&amp;#39;11&amp;#39; 在其他语言，包括</description>
+    </item>
+    
+  </channel>
+</rss>

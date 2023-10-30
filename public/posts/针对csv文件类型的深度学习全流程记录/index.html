@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.119.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>针对csv文件类型的深度学习全流程记录 &middot; JasonLee</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://blog.jasonleehere.com/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://blog.jasonleehere.com/"><h1>JasonLee</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://blog.jasonleehere.com/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2023. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>针对csv文件类型的深度学习全流程记录</h1>
+  <time datetime=2023-06-06T19:46:55Z class="post-date">Tue, Jun 6, 2023</time>
+  <h2 id="前言">前言</h2>
+<p>就像我之前的<a href="https://blog.jasonleehere.com/2023/05/22/cong-shu-ru-xing-shi-de-jiao-du-fen-xi-shen-du-xue-xi-wei-lai-de-xue-xi-fang-xiang/">post</a>里讲的那样，输入形式或者说处理对象的多样化是ai从业者面对的挑战之一。这篇文章，我将尽力解决存储在csv中的数据，涉及到读取、预处理、写入等环节。</p>
+<h2 id="读取">读取</h2>
+<p>pd.read_csv(&lsquo;path&rsquo;)</p>
+<h2 id="预处理">预处理</h2>
+<p>一个csv文件，里面的值会是什么样呢？一种是数值形式，一种是文本形式。对于数值形式，有哪些处理方法呢？</p>
+<blockquote>
+<p>缺失值处理：检查数据中是否存在缺失值（NaN或空值），并根据实际情况进行处理。常见的方法包括删除带有缺失值的样本、用平均值或中位数填充缺失值，或使用插值方法进行填充。</p>
+<p>特征缩放：对于数值型特征，进行特征缩放可以帮助模型更好地进行训练。常见的特征缩放方法包括标准化（将数据转换为均值为0，方差为1的分布）、归一化（将数据缩放到0和1之间的范围）等。</p>
+<p>异常值处理：检测和处理异常值可以提高模型的鲁棒性。可以使用统计方法（如均值加减三倍标准差）或基于分布的方法来检测异常值，并根据实际情况进行修正或删除。</p>
+<p>离散化/分箱处理：将连续型的数值特征转化为离散型特征，可以在一定程度上提高模型的效果。可以使用等频分箱、等宽分箱等方法将数值范围划分为多个离散的区间，并将数值映射到对应的区间。</p>
+<p>特征选择：根据数据的实际情况，选择对目标变量有更强相关性的数值特征进行训练。可以使用相关性分析、特征重要性评估等方法进行特征选择。</p>
+<p>数据标准化：对于某些具有明确量纲的特征，例如日期、时间等，可以进行数据标准化，将其转换为合适的数值表示，便于模型理解和处理。</p>
+</blockquote>
+<p>对于非数值型数据，可以采取以下预处理措施：</p>
+<blockquote>
+<p>标签编码：对于具有顺序关系的分类变量，可以使用标签编码将其转换为数值表示。例如，将&quot;低&quot;、&ldquo;中&rdquo;、&ldquo;高&quot;转换为0、1、2等。</p>
+<p>独热编码：对于没有顺序关系的分类变量，可以使用独热编码将其转换为多个二进制特征表示。独热编码将每个类别转换为一个独立的特征，并且只有一个特征的值为1，其余特征的值都为0。这可以避免模型将无序的类别变量视为有序的。</p>
+<p>词袋模型/文本向量化：对于文本数据，可以使用词袋模型或文本向量化方法将文本转换为数值表示。词袋模型将文本视为单词的集合，并计算每个单词在文本中的出现频率或使用TF-IDF等方法进行加权。文本向量化方法（如Word2Vec、GloVe等）可以将单词嵌入到低维向量空间中，保留了单词之间的语义关系。</p>
+<p>序列编码：对于具有顺序关系的序列数据，例如时间序列或序列文本，可以使用序列编码方法将其转换为数值表示。常见的序列编码方法包括循环神经网络（RNN）和长短期记忆网络（LSTM）等。</p>
+<p>类别合并/分组：对于具有大量类别但类别之间相似度较高的非数值型数据，可以考虑将类别进行合并或分组，减少特征维度的同时保留信息。</p>
+<p>异常值处理：对于非数值型数据，也可能存在异常值，例如错误的标签或不一致的类别。可以检测和处理这些异常值，例如进行纠正或删除。</p>
+</blockquote>
+<h3 id="标准化">标准化</h3>
+<pre tabindex="0"><code>numeric_features = all_features.dtypes[all_features.dtypes != &#39;object&#39;].index
+all_features[numeric_features] = all_features[numeric_features].apply(
+    lambda x: (x - x.mean()) / (x.std()))
+</code></pre><h2 id="数据集的制作">数据集的制作</h2>
+<p>预处理好数据后，将数据转化为tensor格式。要将目前的pd表格数据转为tensor，最简单的方法是torch.tensor():</p>
+<pre tabindex="0"><code>train_features = torch.tensor(all_features[:n_train].values, dtype=torch.float32)
+</code></pre><p>这里不是采用继承torch.utils.Dataset类的写法，而是直接将train_features用一个函数制作数据集：</p>
+<pre tabindex="0"><code>dataset = torch.utils.data.TensorDataset(*data)
+</code></pre><p>最后包裹一层DataLoader。</p>
+<h2 id="搭建网络">搭建网络</h2>
+<p>对于网络，可以不用类的写法，而是实现nn.Sequential函数：</p>
+<pre tabindex="0"><code>net = nn.Sequential(
+  nn.Linear(in_features, 512),
+  nn.ReLU(),
+  nn.Dropout(0.2),
+  nn.Linear(512, 1),
+)
+</code></pre><p>这样，节省了不少代码。</p>
+<h2 id="损失和优化器">损失和优化器</h2>
+<p>这里的损失采用了MSE函数，由于期望值较大（六位数），因此损失值较大，让我以为训练出错了。另外，如果用SGD，损失将为nan。改用Adam优化器才能正常训练。推测是因为SGD对学习率敏感，学习率不设置的很精确的话，训练直接失败。</p>
+<h2 id="完整流程">完整流程</h2>
+<p>形成一种规范：代码开头，导入库后，跟着指定默认设备，和超参数。接着开始制作数据集，包括数据的预处理。然后定义网络结构、损失函数、优化器。然后是正式的训练代码。最后测试时，记得将model调至测试模式，使得dropout能正常工作。</p>
+<p><a href="https://github.com/li199-code/d2l-pytorch/blob/main/house_price.ipynb">代码地址</a></p>
+<h2 id="总结">总结</h2>
+<p>之前写pytorch的时候，写法很死板。经过这一次练习，接触到了新的写法，比如dataset部分和网络部分。</p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

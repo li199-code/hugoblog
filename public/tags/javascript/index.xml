@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on JasonLee</title>
+    <link>http://blog.jasonleehere.com/tags/javascript/</link>
+    <description>Recent content in javascript on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 02 Feb 2023 15:20:42 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>javascript import 语法</title>
+      <link>http://blog.jasonleehere.com/posts/javascript-import-%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Thu, 02 Feb 2023 15:20:42 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/javascript-import-%E8%AF%AD%E6%B3%95/</guid>
+      <description>对于前端项目中广泛存在的 import 一直有许多疑问：为什么有的加花括号？为什么有的没有 from？这篇文章对 import 的各种情况做一个覆盖记录。 大部分 import 的都是 e</description>
+    </item>
+    
+    <item>
+      <title>函数的变量提升等</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87%E7%AD%89/</link>
+      <pubDate>Fri, 26 Aug 2022 23:04:24 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87%E7%AD%89/</guid>
+      <description>函数表达式和函数声明的区别 函数表达式与函数声明的最主要区别是函数名称（function name），在函数表达式中可省略它，从而创建匿名函数（</description>
+    </item>
+    
+    <item>
+      <title>string/array方法总结</title>
+      <link>http://blog.jasonleehere.com/posts/string-array%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Wed, 24 Aug 2022 14:55:55 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/string-array%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/</guid>
+      <description>string、array是非常常用的数据类型。对下面的常用方法进行总结。 string 说明：str表示某一个字符串 字符串长度：str.length 查找子</description>
+    </item>
+    
+    <item>
+      <title>JS之Promise</title>
+      <link>http://blog.jasonleehere.com/posts/js%E4%B9%8Bpromise/</link>
+      <pubDate>Tue, 26 Jul 2022 17:58:45 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/js%E4%B9%8Bpromise/</guid>
+      <description>&lt;h2 id=&#34;为什么需要promise&#34;&gt;为什么需要promise&lt;/h2&gt;
+&lt;p&gt;首先，存在一次异步任务的需求。然后又有了多次异步任务的需求，而多次异步的书写存在函数瀑布问题，不利于阅读和维护：&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

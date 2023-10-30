@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on JasonLee</title>
+    <link>http://blog.jasonleehere.com/posts/</link>
+    <description>Recent content in Posts on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 28 Oct 2023 21:07:21 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>投资内功修炼--小lin说系列视频观后记录</title>
+      <link>http://blog.jasonleehere.com/posts/%E6%8A%95%E8%B5%84%E5%86%85%E5%8A%9F%E4%BF%AE%E7%82%BC-%E5%B0%8Flin%E8%AF%B4%E7%B3%BB%E5%88%97%E8%A7%86%E9%A2%91%E8%A7%82%E5%90%8E%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sat, 28 Oct 2023 21:07:21 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E6%8A%95%E8%B5%84%E5%86%85%E5%8A%9F%E4%BF%AE%E7%82%BC-%E5%B0%8Flin%E8%AF%B4%E7%B3%BB%E5%88%97%E8%A7%86%E9%A2%91%E8%A7%82%E5%90%8E%E8%AE%B0%E5%BD%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python机器学习-在web中嵌入机器学习模型</title>
+      <link>http://blog.jasonleehere.com/posts/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%9C%A8web%E4%B8%AD%E5%B5%8C%E5%85%A5%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Sat, 28 Oct 2023 20:34:28 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%9C%A8web%E4%B8%AD%E5%B5%8C%E5%85%A5%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B/</guid>
+      <description>本书第九章通过一个简单的文本情感分析的例子，讲述如何在网站上提供机器学习服务。 首先我们来分析一下需求。流程描述是，用户输入一段文本，后台将文</description>
+    </item>
+    
+    <item>
+      <title>python机器学习-模型评估与参数调优</title>
+      <link>http://blog.jasonleehere.com/posts/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E5%8F%82%E6%95%B0%E8%B0%83%E4%BC%98/</link>
+      <pubDate>Mon, 23 Oct 2023 23:20:22 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E5%8F%82%E6%95%B0%E8%B0%83%E4%BC%98/</guid>
+      <description>性能指标（二分类问题） 混淆矩阵 首先，为什么在有准确率（accuracy）的情况下，还要引入别的指标呢？因为受困于数据收集的客观限制，容易出现</description>
+    </item>
+    
+    <item>
+      <title>投资基金记录（长期更新）</title>
+      <link>http://blog.jasonleehere.com/posts/%E6%8A%95%E8%B5%84%E5%9F%BA%E9%87%91%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Thu, 19 Oct 2023 15:22:44 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E6%8A%95%E8%B5%84%E5%9F%BA%E9%87%91%E8%AE%B0%E5%BD%95/</guid>
+      <description>起步 这篇文章长期更新，记录下投资过程中一些想法和做法的改变。 作为一个刚刚工作，且理财经验局限于余额宝的小白，最近也开始诚惶诚恐地投入到喧嚣的</description>
+    </item>
+    
+    <item>
+      <title>python机器学习-数据降维</title>
+      <link>http://blog.jasonleehere.com/posts/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4/</link>
+      <pubDate>Sun, 15 Oct 2023 23:00:39 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4/</guid>
+      <description>PCA（主成分分析） example: import numpy as np from sklearn.decomposition import PCA # 创建一个示例数据集 data = np.array([ [1.5, 2.0, 3.0, 4.5], [2.2, 2.8, 3.9, 4.2], [1.9, 2.5, 3.2, 4.7], [2.7, 3.0, 3.6, 4.0], [2.3, 2.9, 3.7, 4.3] ]) # 初始化 PCA 模型，指定主成分的数量 pca</description>
+    </item>
+    
+    <item>
+      <title>工作中的一些工具使用技巧和方法论</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E5%92%8C%E6%96%B9%E6%B3%95%E8%AE%BA/</link>
+      <pubDate>Wed, 11 Oct 2023 14:37:37 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E5%92%8C%E6%96%B9%E6%B3%95%E8%AE%BA/</guid>
+      <description>我的工作是后端开发，这几天的内容就是做一套增删改查接口，暂时还没涉及复杂的逻辑。之前在外包里面搞前端，工具就两个：vscode 和浏览器。现在</description>
+    </item>
+    
+    <item>
+      <title>《python 机器学习》数据预处理</title>
+      <link>http://blog.jasonleehere.com/posts/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/</link>
+      <pubDate>Tue, 10 Oct 2023 21:20:00 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/</guid>
+      <description>缺失数据值的处理 在 scikit-learn 中处理缺失数据的方法： SimpleImputer: SimpleImputer 是 scikit-learn 中用于填充缺失数据的类。你可以使用不同的策略来填充缺失值，包括均值、中位数、众数等。例如：</description>
+    </item>
+    
+    <item>
+      <title>《python机器学习》分类算法</title>
+      <link>http://blog.jasonleehere.com/posts/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%AC%AC%E4%BA%8C%E7%AB%A0/</link>
+      <pubDate>Mon, 02 Oct 2023 10:57:30 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%AC%AC%E4%BA%8C%E7%AB%A0/</guid>
+      <description>前言 我打算开一个全新的系列，记录我在学习《python 机器学习》这本书过程中的要点和感想。 决策边界图 分类任务中的一种图，可以看出模型在整个网</description>
+    </item>
+    
+    <item>
+      <title>基于eggjs, sequelize和pgsql的小需求</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%9F%BA%E4%BA%8Eeggjs-sequelize%E5%92%8Cpgsql%E7%9A%84%E5%B0%8F%E9%9C%80%E6%B1%82/</link>
+      <pubDate>Fri, 29 Sep 2023 12:13:49 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%9F%BA%E4%BA%8Eeggjs-sequelize%E5%92%8Cpgsql%E7%9A%84%E5%B0%8F%E9%9C%80%E6%B1%82/</guid>
+      <description>前言 这是我在部门遇到的第一个小需求。这一次，我写的是后端代码。刚开始，我还陷入在一种思维定式里，似乎一定要在现有项目的工程里添加代码。如果这</description>
+    </item>
+    
+    <item>
+      <title>sklearn crash course</title>
+      <link>http://blog.jasonleehere.com/posts/sklearn-crash-course/</link>
+      <pubDate>Sun, 24 Sep 2023 23:06:24 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/sklearn-crash-course/</guid>
+      <description>前言 油管视频教程。想到哪儿写到哪儿。 如何让 jupyter notebook 切换到 venv 环境 参考链接 首先在虚拟环境下的 cmd 中运行： pip install ipykernel 然后，在在虚环境中将当前的虚拟环境添加到</description>
+    </item>
+    
+    <item>
+      <title>kafka初体验</title>
+      <link>http://blog.jasonleehere.com/posts/kafka%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Wed, 20 Sep 2023 09:06:00 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/kafka%E5%88%9D%E4%BD%93%E9%AA%8C/</guid>
+      <description>启动 zookeeper 和 kafka 安装参考教程。本机版本是 2.12-3.5.1。 在启动 kafka 之前先启动 zookeeper： .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties 然后 .\bin\windows\kafka-server-start.bat .\config\server.properties 创建 topic .\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --topic my-topic --partitions 3 --replication-factor 1 解释一下</description>
+    </item>
+    
+    <item>
+      <title>文本分类比赛学习记录</title>
+      <link>http://blog.jasonleehere.com/posts/%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB%E6%AF%94%E8%B5%9B%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Wed, 06 Sep 2023 10:54:38 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB%E6%AF%94%E8%B5%9B%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+      <description>前言 本文是我对在公司参加的“ChatGPT 生成文本检测器”比赛。数据集为中文作文样本，其中从互联网上采集得到了真实作文，并且 ChatGLM-6B 生成了部分作文</description>
+    </item>
+    
+    <item>
+      <title>五险一金怎么扣</title>
+      <link>http://blog.jasonleehere.com/posts/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9C%88%E5%B7%A5%E8%B5%84%E8%A2%AB%E6%89%A3%E4%BA%86%E5%93%AA%E4%BA%9B%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Sat, 12 Aug 2023 09:28:25 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9C%88%E5%B7%A5%E8%B5%84%E8%A2%AB%E6%89%A3%E4%BA%86%E5%93%AA%E4%BA%9B%E9%A1%B9%E7%9B%AE/</guid>
+      <description>基础知识 五险一金：养老保险、医疗保险、工伤保险、失业保险、生育保险和住房公积金。 明细 医疗保险 项目 比例 划拨金额 （个人+单位金额）*25% 个人缴</description>
+    </item>
+    
+    <item>
+      <title>redis, pgsql远程连接教程</title>
+      <link>http://blog.jasonleehere.com/posts/redis-pgsql%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Thu, 10 Aug 2023 10:19:58 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/redis-pgsql%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%95%99%E7%A8%8B/</guid>
+      <description>前言 部门在云服务器上开了 redis、postgresql 服务，供新员工练手。这就需要远程登录，这里对这两个工具的登录方式做一个记录。 redis 前提是</description>
+    </item>
+    
+    <item>
+      <title>typescript文件造成win文件夹卡顿原因及解决方案</title>
+      <link>http://blog.jasonleehere.com/posts/typescript%E6%96%87%E4%BB%B6%E9%80%A0%E6%88%90win%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8D%A1%E9%A1%BF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Wed, 09 Aug 2023 09:43:24 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/typescript%E6%96%87%E4%BB%B6%E9%80%A0%E6%88%90win%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8D%A1%E9%A1%BF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description>写了好几天的 ts 代码，发现打开包含 ts 代码的文件夹时，文件夹会缓慢刷新，而且不是列表形式展示。非常痛苦:( 一开始以为是 windows11 的 bug，后来一想，最开</description>
+    </item>
+    
+    <item>
+      <title>同步异步任务在javascript中的实现</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%9C%A8javascript%E4%B8%AD%E7%9A%84%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Mon, 07 Aug 2023 14:45:51 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%9C%A8javascript%E4%B8%AD%E7%9A%84%E5%AE%9E%E7%8E%B0/</guid>
+      <description>前言 同步异步一直是一个绕不过去的小问题，要么遇不上，要么遇上了似懂非懂。这篇文章力争从异步任务的底层需求出发，对 promise、async/</description>
+    </item>
+    
+    <item>
+      <title>typescript入门记录</title>
+      <link>http://blog.jasonleehere.com/posts/typescript%E5%85%A5%E9%97%A8%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Fri, 04 Aug 2023 09:29:21 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/typescript%E5%85%A5%E9%97%A8%E8%AE%B0%E5%BD%95/</guid>
+      <description>typescript 的工作方式 首先要明白，在 javascript 存在了这么多年的情况下，为什么发明 typescript？js 能运行一些非常奇葩的代码，比如: console.log(1+&amp;#39;1&amp;#39;) //&amp;#39;11&amp;#39; 在其他语言，包括</description>
+    </item>
+    
+    <item>
+      <title>nestjs入门</title>
+      <link>http://blog.jasonleehere.com/posts/nestjs%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 31 Jul 2023 15:50:40 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/nestjs%E5%85%A5%E9%97%A8/</guid>
+      <description>前言 软开团队之前做过的一个项目，用 nestjs 做的。我听到时很惊讶，部门负责人竟然这么敢用当时看起来还那么稚嫩的 nodejs 作为后端语言。让我们开始吧。 安装 类似</description>
+    </item>
+    
+    <item>
+      <title>第一份工作入职记录（长期更新）</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%85%A5%E8%81%8C%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Mon, 31 Jul 2023 14:15:44 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%85%A5%E8%81%8C%E5%88%9D%E4%BD%93%E9%AA%8C/</guid>
+      <description>前言 经历了多日的培训，在奔波之后，终于迎来了入职。除了辛苦，我还有哪些想说的？又如何在公司外部环境的裹挟中，不忘记理想？ 这篇文章保持更新。 待</description>
+    </item>
+    
+    <item>
+      <title>wey项目的改造</title>
+      <link>http://blog.jasonleehere.com/posts/wey%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%94%B9%E9%80%A0/</link>
+      <pubDate>Sun, 16 Jul 2023 22:22:21 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/wey%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%94%B9%E9%80%A0/</guid>
+      <description>前言 最近根据油管上提供的全栈路线示意图, 同时对自己的开发对象进行了总结（即全栈做小微型应用），结合知乎上的回答，对wey项目进行改造，使得学</description>
+    </item>
+    
+    <item>
+      <title>linux ubuntu笔记</title>
+      <link>http://blog.jasonleehere.com/posts/linux-ubuntu%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 10 Jul 2023 19:43:44 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/linux-ubuntu%E7%AC%94%E8%AE%B0/</guid>
+      <description>前言 跟随全栈学习路线之linux系统熟悉。由于linux的命令很多，且有些命令很长，很难记住，但是借助gpt，无需强调记住命令，而是重点学习</description>
+    </item>
+    
+    <item>
+      <title>快速部署深度学习模型：gradio初体验</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8Bgradio%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Thu, 06 Jul 2023 20:47:44 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8Bgradio%E5%88%9D%E4%BD%93%E9%AA%8C/</guid>
+      <description>前言 需求：将机器学习的模型变成网页应用，并部署到公网上用于访问。 前几个月，当时也有类似的需求，想将自己毕业论文中的一个图像处理模型部署到公网</description>
+    </item>
+    
+    <item>
+      <title>近期关于深度学习的一些思考</title>
+      <link>http://blog.jasonleehere.com/posts/%E8%BF%91%E6%9C%9F%E5%85%B3%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/</link>
+      <pubDate>Sun, 02 Jul 2023 19:26:46 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E8%BF%91%E6%9C%9F%E5%85%B3%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/</guid>
+      <description>最近在知乎上看到一个问题：为什么2022年AI井喷，但是岗位需求数量没有明显增长？下面有一个回答，比较戳中我。 我们要将research和ap</description>
+    </item>
+    
+    <item>
+      <title>vue和django项目的开发/生产环境配置管理</title>
+      <link>http://blog.jasonleehere.com/posts/vue%E5%92%8Cdjango%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%BC%80%E5%8F%91-%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Mon, 26 Jun 2023 22:33:30 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/vue%E5%92%8Cdjango%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%BC%80%E5%8F%91-%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/</guid>
+      <description>前言 虽然教程作者提到了一些分开管理两种环境的做法，但是我这边没有形成完整可复制的做法。借助chatgpt，将收获整理出来。 vuejs 在项目的根目录下</description>
+    </item>
+    
+    <item>
+      <title>django&#43;nginx&#43;mysql 三容器部署</title>
+      <link>http://blog.jasonleehere.com/posts/django-nginx-mysql-%E4%B8%89%E5%AE%B9%E5%99%A8%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Sat, 24 Jun 2023 17:16:09 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/django-nginx-mysql-%E4%B8%89%E5%AE%B9%E5%99%A8%E9%83%A8%E7%BD%B2/</guid>
+      <description>前言 之前的部署直接采用默认的sqlite3作为数据库。因为sqlite3是文件式数据库，所以打造容器时，本地调试过程中的数据记录也被包含进去</description>
+    </item>
+    
+    <item>
+      <title>wey: 基于vue&#43;django的社交网站(0)</title>
+      <link>http://blog.jasonleehere.com/posts/wey-%E5%9F%BA%E4%BA%8Evue-django%E7%9A%84%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%AB%99-0/</link>
+      <pubDate>Thu, 22 Jun 2023 20:49:39 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/wey-%E5%9F%BA%E4%BA%8Evue-django%E7%9A%84%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%AB%99-0/</guid>
+      <description>前言 这个项目我是跟随youtube上的博主视频教程做的。大概是从五月初开始的，持续了三个星期左右。这个项目对我来说有着非凡的意义，因为能将它</description>
+    </item>
+    
+    <item>
+      <title>知乎上一个问答引起的思考——写在职业生涯开启之前</title>
+      <link>http://blog.jasonleehere.com/posts/%E7%9F%A5%E4%B9%8E%E4%B8%8A%E4%B8%80%E4%B8%AA%E9%97%AE%E7%AD%94%E5%BC%95%E8%B5%B7%E7%9A%84%E6%80%9D%E8%80%83%E5%86%99%E5%9C%A8%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF%E5%BC%80%E5%90%AF%E4%B9%8B%E5%89%8D/</link>
+      <pubDate>Thu, 22 Jun 2023 10:43:59 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E7%9F%A5%E4%B9%8E%E4%B8%8A%E4%B8%80%E4%B8%AA%E9%97%AE%E7%AD%94%E5%BC%95%E8%B5%B7%E7%9A%84%E6%80%9D%E8%80%83%E5%86%99%E5%9C%A8%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF%E5%BC%80%E5%90%AF%E4%B9%8B%E5%89%8D/</guid>
+      <description>今天在知乎看到一个问题：我爸对计算机行业的看法。我看了问题描述和下面的几个回答，这个问题也是触及到了一种技术人的痛点：我们究竟要根据自己实际</description>
+    </item>
+    
+    <item>
+      <title>我的python开发环境管理实践</title>
+      <link>http://blog.jasonleehere.com/posts/%E6%88%91%E7%9A%84python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Wed, 21 Jun 2023 08:33:38 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E6%88%91%E7%9A%84python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86%E5%AE%9E%E8%B7%B5/</guid>
+      <description>前言 前段时间做项目，摸索出了一套比较稳定且适合自己的python环境管理方案，适用于win10/11。 venv的使用 我在之前很长一段时间里用</description>
+    </item>
+    
+    <item>
+      <title>逐步让Google收录本博客</title>
+      <link>http://blog.jasonleehere.com/posts/%E9%80%90%E6%AD%A5%E8%AE%A9google%E6%94%B6%E5%BD%95%E6%9C%AC%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Mon, 19 Jun 2023 09:18:30 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E9%80%90%E6%AD%A5%E8%AE%A9google%E6%94%B6%E5%BD%95%E6%9C%AC%E5%8D%9A%E5%AE%A2/</guid>
+      <description>前言 这个博客建立快满一年了，到目前为止积累了77篇文章，都是原创。建立之初以为半年之内Google会自动收录，没想到现在依旧未收录。之前有手</description>
+    </item>
+    
+    <item>
+      <title>谈谈移民的过程中目标的安排</title>
+      <link>http://blog.jasonleehere.com/posts/%E8%B0%88%E8%B0%88%E7%A7%BB%E6%B0%91%E7%9A%84%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9B%AE%E6%A0%87%E7%9A%84%E5%AE%89%E6%8E%92/</link>
+      <pubDate>Tue, 13 Jun 2023 14:57:13 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E8%B0%88%E8%B0%88%E7%A7%BB%E6%B0%91%E7%9A%84%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9B%AE%E6%A0%87%E7%9A%84%E5%AE%89%E6%8E%92/</guid>
+      <description>时近毕业季，关于我未来的安排的想法一直在我的脑中激荡。移民这条路上，有诸多未知的因素，而出去仅仅才是第一步。 我想，国外初期的学费和生活费本不</description>
+    </item>
+    
+    <item>
+      <title>针对csv文件类型的深度学习全流程记录</title>
+      <link>http://blog.jasonleehere.com/posts/%E9%92%88%E5%AF%B9csv%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%85%A8%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Tue, 06 Jun 2023 19:46:55 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E9%92%88%E5%AF%B9csv%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%85%A8%E6%B5%81%E7%A8%8B%E8%AE%B0%E5%BD%95/</guid>
+      <description>前言 就像我之前的post里讲的那样，输入形式或者说处理对象的多样化是ai从业者面对的挑战之一。这篇文章，我将尽力解决存储在csv中的数据，涉</description>
+    </item>
+    
+    <item>
+      <title>django静态文件管理</title>
+      <link>http://blog.jasonleehere.com/posts/django%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Tue, 30 May 2023 20:57:21 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/django%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</guid>
+      <description>前言 可以分为开发和部署两个阶段进行介绍。 开发 STATIC_URL = &amp;ldquo;static/&amp;quot;（默认设置好的），这一项是告诉django，静态文件</description>
+    </item>
+    
+    <item>
+      <title>基于docker的django&#43;vue网站部署</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%9F%BA%E4%BA%8Edocker%E7%9A%84django-vue%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Mon, 29 May 2023 22:28:41 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%9F%BA%E4%BA%8Edocker%E7%9A%84django-vue%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</guid>
+      <description>前言 部署和开发是两个完全不同的工作。得益于docker等虚拟化技术，现在的部署已经简单许多了。尽管作者是用原生linux环境做示范，但是我选</description>
+    </item>
+    
+    <item>
+      <title>爱尔兰-Irish攻略</title>
+      <link>http://blog.jasonleehere.com/posts/%E7%88%B1%E5%B0%94%E5%85%B0-irish%E6%94%BB%E7%95%A5/</link>
+      <pubDate>Wed, 24 May 2023 22:25:58 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E7%88%B1%E5%B0%94%E5%85%B0-irish%E6%94%BB%E7%95%A5/</guid>
+      <description>路线 留学 工作 工签（stamp1） 换永居（stamp4）入籍 搜集信息 一手信息 永居和入籍：如果是程序员工种，先用学签stamp2，读书一年（硕士</description>
+    </item>
+    
+    <item>
+      <title>run的方法论</title>
+      <link>http://blog.jasonleehere.com/posts/run%E7%9A%84%E6%96%B9%E6%B3%95%E8%AE%BA/</link>
+      <pubDate>Wed, 24 May 2023 20:44:06 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/run%E7%9A%84%E6%96%B9%E6%B3%95%E8%AE%BA/</guid>
+      <description>每一个国家的方案设计，都可以概括为三步： 大致路线：留学+工作，然后永居/入籍 搜集信息 制定方案 主要是搜集信息这一步非常关键。首先信息分为一手信</description>
+    </item>
+    
+    <item>
+      <title>pytorch tutorial 笔记&#43;注解</title>
+      <link>http://blog.jasonleehere.com/posts/pytorch-tutorial%E7%AC%94%E8%AE%B0-%E6%B3%A8%E8%A7%A3/</link>
+      <pubDate>Tue, 23 May 2023 13:12:24 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/pytorch-tutorial%E7%AC%94%E8%AE%B0-%E6%B3%A8%E8%A7%A3/</guid>
+      <description>前言 pytorch，一个熟悉又陌生的朋友。以前用到它时，常常是哪里不会查哪里；等过一阵子又忘记了用法还得重新查。虽然毕业论文课题用到了框架，</description>
+    </item>
+    
+    <item>
+      <title>从输入形式的角度分析深度学习未来的学习方向</title>
+      <link>http://blog.jasonleehere.com/posts/%E4%BB%8E%E8%BE%93%E5%85%A5%E5%BD%A2%E5%BC%8F%E7%9A%84%E8%A7%92%E5%BA%A6%E5%88%86%E6%9E%90%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91/</link>
+      <pubDate>Mon, 22 May 2023 16:28:22 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E4%BB%8E%E8%BE%93%E5%85%A5%E5%BD%A2%E5%BC%8F%E7%9A%84%E8%A7%92%E5%BA%A6%E5%88%86%E6%9E%90%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91/</guid>
+      <description>正如web开发中，java（后端语言）、javascript（前端语言）、数据库，理论上说，有了这三样东西，可以建立任何web网站的原型。在</description>
+    </item>
+    
+    <item>
+      <title>子组件外面一层的div为什么要加v-if</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%AD%90%E7%BB%84%E4%BB%B6%E5%A4%96%E9%9D%A2%E4%B8%80%E5%B1%82%E7%9A%84div%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%8A%A0v-if/</link>
+      <pubDate>Mon, 15 May 2023 14:10:57 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%AD%90%E7%BB%84%E4%BB%B6%E5%A4%96%E9%9D%A2%E4%B8%80%E5%B1%82%E7%9A%84div%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%8A%A0v-if/</guid>
+      <description>项目中有这样一段代码： &amp;lt;div class=&amp;#34;p-4 bg-white border border-gray-200 rounded-lg mb-4&amp;#34; v-if=&amp;#34;post.id&amp;#34;&amp;gt; &amp;lt;PostItem v-bind:post=&amp;#34;post&amp;#34; /&amp;gt; &amp;lt;/div&amp;gt; PostItem作为子组件被包裹在一层div中，外层div起到控制样式的作用。如果去掉v-if</description>
+    </item>
+    
+    <item>
+      <title>django get和post获取请求参数或路由变量</title>
+      <link>http://blog.jasonleehere.com/posts/get%E5%92%8Cpost%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E6%88%96%E8%B7%AF%E7%94%B1%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Sat, 13 May 2023 22:31:53 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/get%E5%92%8Cpost%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E6%88%96%E8%B7%AF%E7%94%B1%E5%8F%98%E9%87%8F/</guid>
+      <description>前言 前后端分离的情况下，数据通过axios传输到后端，如何取出携带的数据？ get请求 get请求里面，可能携带的参数位置都在url上，分别是路</description>
+    </item>
+    
+    <item>
+      <title>django默认和自定义的用户身份验证</title>
+      <link>http://blog.jasonleehere.com/posts/django%E9%BB%98%E8%AE%A4%E5%92%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81/</link>
+      <pubDate>Wed, 10 May 2023 09:16:20 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/django%E9%BB%98%E8%AE%A4%E5%92%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81/</guid>
+      <description>前言 在做项目时，身份验证是目前疑虑最多的地方：为什么这里要新建一个User模型？为什么要重写管理器？这篇文章通过查阅文档，尝试从最佳实践的角</description>
+    </item>
+    
+    <item>
+      <title>JWT认证</title>
+      <link>http://blog.jasonleehere.com/posts/jwt%E8%AE%A4%E8%AF%81/</link>
+      <pubDate>Mon, 08 May 2023 19:33:25 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/jwt%E8%AE%A4%E8%AF%81/</guid>
+      <description>前言 各种认证方式一直是我头痛的点。奇怪的是，几乎所有的web开发教程都默认你已经会了，而不会专门教学，只是一笔带过。你只能自己去找博客看。参</description>
+    </item>
+    
+    <item>
+      <title>我在2023年回顾python3基础</title>
+      <link>http://blog.jasonleehere.com/posts/%E6%88%91%E5%9C%A82023%E5%B9%B4%E5%9B%9E%E9%A1%BEpython3%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sat, 06 May 2023 17:02:05 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E6%88%91%E5%9C%A82023%E5%B9%B4%E5%9B%9E%E9%A1%BEpython3%E5%9F%BA%E7%A1%80/</guid>
+      <description>到底什么是数字、元组、字符串的不可变性？ 不可变性，指的是不能改变原有位置上的元素；不包括在空位置上创建元素。所以，元组都可以连接其他同类元素</description>
+    </item>
+    
+    <item>
+      <title>flex/grid布局在tailwindcss中的使用</title>
+      <link>http://blog.jasonleehere.com/posts/flex-grid%E5%B8%83%E5%B1%80%E5%9C%A8tailwindcss%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Wed, 03 May 2023 09:13:46 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/flex-grid%E5%B8%83%E5%B1%80%E5%9C%A8tailwindcss%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>前言 tailwindcss使得不用离开html界面就可以完成css coding。常见的样式多写几次自然就记住了，如果不会的，还可以查文档，但</description>
+    </item>
+    
+    <item>
+      <title>django-rest-framework使用入门</title>
+      <link>http://blog.jasonleehere.com/posts/django-rest-framework%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Tue, 02 May 2023 14:19:07 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/django-rest-framework%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</guid>
+      <description>浏览器行为 当我用drf提供的浏览器可视化界面，发现了一个奇怪的问题。同样是访问http://127.0.0.1:8000/snippets/</description>
+    </item>
+    
+    <item>
+      <title>类视图的使用</title>
+      <link>http://blog.jasonleehere.com/posts/%E7%B1%BB%E8%A7%86%E5%9B%BE%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 May 2023 10:07:54 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E7%B1%BB%E8%A7%86%E5%9B%BE%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>前言 对于类视图和函数视图，在我初学django的时，有过这样的迷思：自己定义的类视图似乎和函数视图没有太大的区别，无非就是判断请求方式的时候</description>
+    </item>
+    
+    <item>
+      <title>ModelForm详解</title>
+      <link>http://blog.jasonleehere.com/posts/modelform%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Fri, 28 Apr 2023 16:05:54 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/modelform%E8%AF%A6%E8%A7%A3/</guid>
+      <description>前言 web开发中，我目前遇到最复杂、又是最需要的需求，就是用户验证系统。除了一般的注册登录，还有权限、分组等。而从注册开始，需要理解djan</description>
+    </item>
+    
+    <item>
+      <title>tailwindcss配置</title>
+      <link>http://blog.jasonleehere.com/posts/tailwindcss%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 27 Apr 2023 16:50:53 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/tailwindcss%E9%85%8D%E7%BD%AE/</guid>
+      <description>前言 一个准备实现的django项目中用到了tailwindcss。年初我曾接触过tcss，但是由于文档对我来说有点看不懂，配置了很久还是失败</description>
+    </item>
+    
+    <item>
+      <title>django关系字段</title>
+      <link>http://blog.jasonleehere.com/posts/%E8%A1%A8%E5%85%B3%E7%B3%BB/</link>
+      <pubDate>Wed, 26 Apr 2023 10:28:04 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E8%A1%A8%E5%85%B3%E7%B3%BB/</guid>
+      <description>前言 mysql断断续续地学，一直对诸如外键的概念不甚清晰，今天做一个备忘。在这篇博文的基础上，加上了一些自己的理解。 建表 #_*_coding:utf-8_*_ from django.db import models # Create your models here.</description>
+    </item>
+    
+    <item>
+      <title>matplotlib最佳实践</title>
+      <link>http://blog.jasonleehere.com/posts/matplotlib%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Fri, 21 Apr 2023 14:25:44 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/matplotlib%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
+      <description>前言 跟着油管上的教程学的，作者介绍了一些最佳实践，融合一些自己的思考，把觉得有用的东西记录一下。 part1 折线图 # 导包区 from matplotlib import pyplot as plt # plt.style.use(&amp;#39;seaborn&amp;#39;) # 切换图片风</description>
+    </item>
+    
+    <item>
+      <title>latex清除浮动来消除大片空白</title>
+      <link>http://blog.jasonleehere.com/posts/%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E6%9D%A5%E6%B6%88%E9%99%A4%E5%A4%A7%E7%89%87%E7%A9%BA%E7%99%BD/</link>
+      <pubDate>Thu, 20 Apr 2023 10:34:27 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E6%9D%A5%E6%B6%88%E9%99%A4%E5%A4%A7%E7%89%87%E7%A9%BA%E7%99%BD/</guid>
+      <description>问题描述 虽然latex是自动排版，但是偶尔会出现明明可以放下内容的地方，被留下空白。通常是发生在多个表格或者图片相连，然后后面跟着文字，文字</description>
+    </item>
+    
+    <item>
+      <title>pdf转word</title>
+      <link>http://blog.jasonleehere.com/posts/pdf%E8%BD%ACword/</link>
+      <pubDate>Fri, 14 Apr 2023 19:35:26 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/pdf%E8%BD%ACword/</guid>
+      <description>问题描述 学校的系统要求同时上交pdf和word版本的论文。latex写的只能生成pdf，就有了转word需求。通过搜索，先后尝试了pando</description>
+    </item>
+    
+    <item>
+      <title>Batch Normalization</title>
+      <link>http://blog.jasonleehere.com/posts/normalization/</link>
+      <pubDate>Sun, 02 Apr 2023 20:31:59 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/normalization/</guid>
+      <description>前言 Batch Normalization （BN）层，通过将数据批量归一化（使其分布在N（0，1）），有下列好处： 缓解了梯度传递问题，使模型适应更大的学习率，加速了训练； 改善</description>
+    </item>
+    
+    <item>
+      <title>pytorch装环境</title>
+      <link>http://blog.jasonleehere.com/posts/pytorch%E8%A3%85%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Sat, 01 Apr 2023 20:54:38 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/pytorch%E8%A3%85%E7%8E%AF%E5%A2%83/</guid>
+      <description>问题描述 跟李沐学AI，装环境时，发现无论是本地，还是切到colab，都出现环境问题。甚至还有奇葩的要求装gpu，但是conda返回的是cpu</description>
+    </item>
+    
+    <item>
+      <title>卷积</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%8D%B7%E7%A7%AF/</link>
+      <pubDate>Thu, 30 Mar 2023 14:51:38 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%8D%B7%E7%A7%AF/</guid>
+      <description>前言 我的研究生方向是图像处理，也用到了深度学习工具，所以这部分相对熟悉一些。在学习过程中，也发现了一些以前没有注意到的知识，比如卷积这个词是</description>
+    </item>
+    
+    <item>
+      <title>win11 中文输入法全角半角切换</title>
+      <link>http://blog.jasonleehere.com/posts/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95%E5%85%A8%E8%A7%92%E5%8D%8A%E8%A7%92%E5%88%87%E6%8D%A2/</link>
+      <pubDate>Thu, 30 Mar 2023 10:04:59 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95%E5%85%A8%E8%A7%92%E5%8D%8A%E8%A7%92%E5%88%87%E6%8D%A2/</guid>
+      <description>问题描述 在中文输入法状态，输入英文时，字符会变得很大，间距变宽。这是输入法全角的缘故。 解决方案 快捷键shift+space可以切换全角半角。</description>
+    </item>
+    
+    <item>
+      <title>pytorch的基本使用</title>
+      <link>http://blog.jasonleehere.com/posts/pytorch%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Tue, 28 Mar 2023 16:43:29 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/pytorch%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</guid>
+      <description>之前我们有大量的从零实现一层网络，现在借用先进的pytorch框架，让很多功能得到封装，可以快捷的组建一个块。 nn.Module nn.Module是pyto</description>
+    </item>
+    
+    <item>
+      <title>神经网络初始化权重为什么不能为0</title>
+      <link>http://blog.jasonleehere.com/posts/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9D%83%E9%87%8D%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E4%B8%BA0/</link>
+      <pubDate>Tue, 28 Mar 2023 15:42:06 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9D%83%E9%87%8D%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E4%B8%BA0/</guid>
+      <description>原来的困惑，权重是根据梯度大小来更新的，初始权重相同怎么会影响梯度更新呢？网上查阅答案，都说是什么损失函数根据权重大小进行分配，看的更是云里</description>
+    </item>
+    
+    <item>
+      <title>数值稳定性和权重初始化</title>
+      <link>http://blog.jasonleehere.com/posts/%E6%95%B0%E5%80%BC%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%92%8C%E6%9D%83%E9%87%8D%E5%88%9D%E5%A7%8B%E5%8C%96/</link>
+      <pubDate>Mon, 27 Mar 2023 13:01:59 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E6%95%B0%E5%80%BC%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%92%8C%E6%9D%83%E9%87%8D%E5%88%9D%E5%A7%8B%E5%8C%96/</guid>
+      <description>梯度爆炸和梯度消失问题 梯度爆炸 因为梯度的计算是通过偏导数的链式法则，所以，对于一个很深的网络，反向传播时，计算最后几层的梯度，很可能会超出数</description>
+    </item>
+    
+    <item>
+      <title>开润</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%BC%80%E6%B6%A6/</link>
+      <pubDate>Mon, 27 Mar 2023 11:23:49 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%BC%80%E6%B6%A6/</guid>
+      <description>今天，正式开启一个伟大的专栏，记录一下从现在开始，一直到成功的过程。 为什么润 很简单，我不想受罪。 怎么选择目的地 首先，要分析自身。我没钱，最好</description>
+    </item>
+    
+    <item>
+      <title>多层感知机（MLP)</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BAmlp/</link>
+      <pubDate>Sat, 25 Mar 2023 14:59:43 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BAmlp/</guid>
+      <description>终于从前面的单层网络linear-regression和softmax过渡到多层神经网络了。为了对更加复杂的数据进行学习，多层感知机将多个全</description>
+    </item>
+    
+    <item>
+      <title>softmax回归（分类）</title>
+      <link>http://blog.jasonleehere.com/posts/softmax%E5%9B%9E%E5%BD%92%E5%88%86%E7%B1%BB/</link>
+      <pubDate>Thu, 23 Mar 2023 10:20:57 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/softmax%E5%9B%9E%E5%BD%92%E5%88%86%E7%B1%BB/</guid>
+      <description>回归和分类 机器学习（深度学习）的任务纷繁复杂。最基础的是回归和分类。回归是预测连续值，分类是预测离散类别。 分类问题是多输出，因此，训练标签和</description>
+    </item>
+    
+    <item>
+      <title>线性回归</title>
+      <link>http://blog.jasonleehere.com/posts/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</link>
+      <pubDate>Wed, 22 Mar 2023 18:46:05 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</guid>
+      <description>线性回归 一句话表示，就是数据的分布是按照如下的线性表达式： $$ y=w_1x_1+w_2x_2+&amp;hellip;+w_nx_n+b $$ $w_n$就是网络的权重（参数），b 也是一种权重。 代码实现 import random import torch from d2l import torch as</description>
+    </item>
+    
+    <item>
+      <title>动手pytorch</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%8A%A8%E6%89%8Bpytorch/</link>
+      <pubDate>Tue, 21 Mar 2023 10:18:17 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%8A%A8%E6%89%8Bpytorch/</guid>
+      <description>这个系列记录我跟随 B 站上李沐的《动手学深度学习》的视频教程。每五个章节的笔记合成一篇 blog。 安装环境 我的学习平台时 win11, powershell, anaconda conda create -n d2l-zh python=3.8 conda activate d2l-zh pip</description>
+    </item>
+    
+    <item>
+      <title>随想</title>
+      <link>http://blog.jasonleehere.com/posts/%E9%9A%8F%E6%83%B3/</link>
+      <pubDate>Sun, 19 Mar 2023 21:51:14 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E9%9A%8F%E6%83%B3/</guid>
+      <description>学任何东西，都要有目标导向，不然容易陷入一种看啥都想学的困境。 我暂时有读博的打算，所以我要学习深度学习。我还要学英语口语，每天都要输入。 还有</description>
+    </item>
+    
+    <item>
+      <title>记录</title>
+      <link>http://blog.jasonleehere.com/posts/%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sat, 18 Mar 2023 21:37:30 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E8%AE%B0%E5%BD%95/</guid>
+      <description>最近几个月的科技革命浪潮，很厉害，让每个人不禁思考自己眼前这份工作的意义。 信息技术领域，实现一个东西，有十种语言，一百个框架，眼花缭乱啊。但</description>
+    </item>
+    
+    <item>
+      <title>我迷茫了</title>
+      <link>http://blog.jasonleehere.com/posts/%E6%88%91%E8%BF%B7%E8%8C%AB%E4%BA%86/</link>
+      <pubDate>Wed, 15 Mar 2023 15:15:00 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E6%88%91%E8%BF%B7%E8%8C%AB%E4%BA%86/</guid>
+      <description>以前，觉得随波逐流是个人因素占多，觉得那是不思考的结果。最近，觉得即使思考过后，也还是容易迷茫，最后不得不随波逐流。 我现在的问题大概就是积累</description>
+    </item>
+    
+    <item>
+      <title>如何让论文插图高清</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%A6%82%E4%BD%95%E8%AE%A9%E8%AE%BA%E6%96%87%E6%8F%92%E5%9B%BE%E9%AB%98%E6%B8%85/</link>
+      <pubDate>Thu, 09 Mar 2023 19:12:43 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%A6%82%E4%BD%95%E8%AE%A9%E8%AE%BA%E6%96%87%E6%8F%92%E5%9B%BE%E9%AB%98%E6%B8%85/</guid>
+      <description>论文中涉及到比较细节特征的图片，有高清的要求。我平常就是把 visio 尽量拉大，然后 snipaste 截图。但是这样在一些比较图上就很模糊。overleaf 又不支持插</description>
+    </item>
+    
+    <item>
+      <title>记一次看病经历</title>
+      <link>http://blog.jasonleehere.com/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%9C%8B%E7%97%85%E7%BB%8F%E5%8E%86/</link>
+      <pubDate>Wed, 08 Mar 2023 14:31:46 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%9C%8B%E7%97%85%E7%BB%8F%E5%8E%86/</guid>
+      <description>左手指甲附近一直有老茧覆盖，是长寻常疣了。昨晚听朋友说，学校办的医保卡，去医院看病，可以报销一部分。具体来说，就是医保分两个账户，个人账户和</description>
+    </item>
+    
+    <item>
+      <title>主题更换和迁移到vercel记录</title>
+      <link>http://blog.jasonleehere.com/posts/%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%8D%A2%E5%92%8C%E8%BF%81%E7%A7%BB%E5%88%B0vercel%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Tue, 07 Mar 2023 10:02:05 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%8D%A2%E5%92%8C%E8%BF%81%E7%A7%BB%E5%88%B0vercel%E8%AE%B0%E5%BD%95/</guid>
+      <description>首先是主题更换。之前用的主题原生很多动画和功能，但是我本身是不喜欢复杂的，所以把背景和功能改的很精简。但是这样反而做的不称心。我的理想样式是</description>
+    </item>
+    
+    <item>
+      <title>latex tabularx解决表格满宽</title>
+      <link>http://blog.jasonleehere.com/posts/latex-tabularx%E8%A7%A3%E5%86%B3%E8%A1%A8%E6%A0%BC%E6%BB%A1%E5%AE%BD/</link>
+      <pubDate>Wed, 22 Feb 2023 21:51:43 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/latex-tabularx%E8%A7%A3%E5%86%B3%E8%A1%A8%E6%A0%BC%E6%BB%A1%E5%AE%BD/</guid>
+      <description>需求：让表格宽度等于页面宽度，单元格列宽可以指定，单元格文字居中。 解决方案：tabularx 是 tabular 的增强版，可以指定表格总体所占宽度，设置步骤</description>
+    </item>
+    
+    <item>
+      <title>visio 使用记录</title>
+      <link>http://blog.jasonleehere.com/posts/visio-%E7%94%BB%E5%9B%BE%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Tue, 21 Feb 2023 21:57:53 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/visio-%E7%94%BB%E5%9B%BE%E8%AE%BE%E7%BD%AE/</guid>
+      <description>配置 visio 是我画图的主力，一个章节创立一个文件。为了方便，进行如下设置： 默认形状 一切默认形状都在“开发工具”-“绘图资源管理器”-“样式”里。 插</description>
+    </item>
+    
+    <item>
+      <title>毕业论文工具链(index)</title>
+      <link>http://blog.jasonleehere.com/posts/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E5%B7%A5%E5%85%B7%E9%93%BE/</link>
+      <pubDate>Thu, 16 Feb 2023 09:37:02 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E5%B7%A5%E5%85%B7%E9%93%BE/</guid>
+      <description>主线：overleaf 在线 latex。 {% post_link latex-overleaf-生僻字处理方案 %} {% post_link latex-tabularx解决表格满宽 %} 笔记工</description>
+    </item>
+    
+    <item>
+      <title>latex overleaf 生僻字处理方案</title>
+      <link>http://blog.jasonleehere.com/posts/latex-overleaf-%E7%94%9F%E5%83%BB%E5%AD%97%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Sun, 12 Feb 2023 23:23:38 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/latex-overleaf-%E7%94%9F%E5%83%BB%E5%AD%97%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88/</guid>
+      <description>用 overleaf 写大论文时候，有一个作者的名字带生僻字：“赟”，overleaf 会显示为“F”。解决方案如下： 在 usepackage 区里，添加以下代码： \usepackage{ctex} \setCJKfamilyfont{myfont}{BabelStone Han} \newcommand{\MyFont}{\CJKfamily{myfont}} 意思是添加</description>
+    </item>
+    
+    <item>
+      <title>站在更高的角度思考前后端分离</title>
+      <link>http://blog.jasonleehere.com/posts/%E7%AB%99%E5%9C%A8%E6%9B%B4%E9%AB%98%E7%9A%84%E8%A7%92%E5%BA%A6%E6%80%9D%E8%80%83%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/</link>
+      <pubDate>Fri, 10 Feb 2023 21:09:48 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E7%AB%99%E5%9C%A8%E6%9B%B4%E9%AB%98%E7%9A%84%E8%A7%92%E5%BA%A6%E6%80%9D%E8%80%83%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/</guid>
+      <description>似乎从我开始学编程起，默认的开发模式就是前后端分离。但是，面对一门心仪的后端框架（如 django，laravel，它往往还带着仿佛上古时期留</description>
+    </item>
+    
+    <item>
+      <title>我的实习总结</title>
+      <link>http://blog.jasonleehere.com/posts/%E6%88%91%E7%9A%84%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Thu, 09 Feb 2023 21:54:10 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E6%88%91%E7%9A%84%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/</guid>
+      <description>2023 年春节前后，在二线城市的一个小外包公司里，我完成了第一份实习，工作内容是一个金融平台的后台管理的前端部分。我是在项目即将交付的时候加入的，</description>
+    </item>
+    
+    <item>
+      <title>namesilo购买域名和github pages配置</title>
+      <link>http://blog.jasonleehere.com/posts/namesilo%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D%E5%92%8Cgithub-pages%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 04 Feb 2023 18:27:15 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/namesilo%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D%E5%92%8Cgithub-pages%E9%85%8D%E7%BD%AE/</guid>
+      <description>自从建立网站以来，每次访问，都困扰于输入长长的域名前缀 www，此外，goldspot 似乎也太长且拗口。坑爹的是，goldspot 绑定的 namesilo 账号</description>
+    </item>
+    
+    <item>
+      <title>javascript import 语法</title>
+      <link>http://blog.jasonleehere.com/posts/javascript-import-%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Thu, 02 Feb 2023 15:20:42 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/javascript-import-%E8%AF%AD%E6%B3%95/</guid>
+      <description>对于前端项目中广泛存在的 import 一直有许多疑问：为什么有的加花括号？为什么有的没有 from？这篇文章对 import 的各种情况做一个覆盖记录。 大部分 import 的都是 e</description>
+    </item>
+    
+    <item>
+      <title>利用python在局域网内传文件</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%88%A9%E7%94%A8python%E5%9C%A8%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E4%BC%A0%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Wed, 01 Feb 2023 11:44:01 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%88%A9%E7%94%A8python%E5%9C%A8%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E4%BC%A0%E6%96%87%E4%BB%B6/</guid>
+      <description>平时办公有一个痛点，用微信只能登录一台电脑，如果双电脑，要传输剪贴板或者文档会非常麻烦。搜索了发现 python 竟然提供了解决方案。果然 python 是万能的。 无需</description>
+    </item>
+    
+    <item>
+      <title>Docker入门</title>
+      <link>http://blog.jasonleehere.com/posts/docker%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Tue, 31 Jan 2023 11:15:33 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/docker%E5%85%A5%E9%97%A8/</guid>
+      <description>公司的项目是用 docker 来部署的。之前看过一个 docker 科普视频，还没有动手实践过。现在将查到的东西做一个梳理（windows 平台）。 docker 基本概念 docker 可以理解为</description>
+    </item>
+    
+    <item>
+      <title>npm 如何管理项目？</title>
+      <link>http://blog.jasonleehere.com/posts/npm-%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Mon, 30 Jan 2023 22:38:05 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/npm-%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE/</guid>
+      <description>npm，从开始动手做前端项目起，就一直陪伴。一个既熟悉又陌生的老朋友。平时，需要什么包，或者启动项目，是最常见的使用场景。但是，出现 bug，</description>
+    </item>
+    
+    <item>
+      <title>git工具的使用</title>
+      <link>http://blog.jasonleehere.com/posts/git%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 23 Jan 2023 11:04:29 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/git%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>前言 实习过程中，大量使用 git。放假前，同事提出，我提交的版本覆盖了他的。为了能在节后解决问题，顺便对 git 工具体系做一个彻底的复习，写下此文。</description>
+    </item>
+    
+    <item>
+      <title>一个独立开发者的思考</title>
+      <link>http://blog.jasonleehere.com/posts/%E4%B8%80%E4%B8%AA%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E6%80%9D%E8%80%83/</link>
+      <pubDate>Sat, 21 Jan 2023 08:46:36 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E4%B8%80%E4%B8%AA%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E6%80%9D%E8%80%83/</guid>
+      <description>PHP 在中国，程序员是用自己的生命为公司提供价值，换取高薪。最重要的不是开发的效率，而是让老板看到自己在加班，让老板觉得自己付出的工资是值得的。</description>
+    </item>
+    
+    <item>
+      <title>Django学习路线</title>
+      <link>http://blog.jasonleehere.com/posts/django%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</link>
+      <pubDate>Tue, 06 Dec 2022 16:38:31 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/django%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</guid>
+      <description>如果刚入门，了解一下学习路线是好的。后面基本入门后，应该从项目入手，做一个项目的思维导图，然后逐个攻破，这样效果更好。</description>
+    </item>
+    
+    <item>
+      <title>Django ORM记录</title>
+      <link>http://blog.jasonleehere.com/posts/django-orm%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Thu, 24 Nov 2022 11:22:00 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/django-orm%E8%AE%B0%E5%BD%95/</guid>
+      <description>记录曾经不懂的问题和踩过的坑 choices Django 模型中的字段有个 choices 属性，这个属性可以提供被选数据。如果一个字段设置了这个属性,在模版中如果我要显示这个字段，</description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>http://blog.jasonleehere.com/posts/mysql/</link>
+      <pubDate>Fri, 18 Nov 2022 20:48:20 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/mysql/</guid>
+      <description>mysql的单表查询很简单，但是单表体积增大时，或者涉及到多表查询时就成了难点。本文主要对这些问题做一些记录。 mysql工作原理 mysql服</description>
+    </item>
+    
+    <item>
+      <title>数据库的基础知识</title>
+      <link>http://blog.jasonleehere.com/posts/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link>
+      <pubDate>Tue, 15 Nov 2022 16:47:08 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid>
+      <description>最近在学django的过程中，发现django乃至整个后端开发，其实围绕的都是数据的请求和响应，也就是数据库操作。后端服务器就是浏览器和数据</description>
+    </item>
+    
+    <item>
+      <title>hexo插入图片</title>
+      <link>http://blog.jasonleehere.com/posts/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</link>
+      <pubDate>Tue, 15 Nov 2022 10:49:22 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</guid>
+      <description>原本hexo博客都是基于markdown编写，但是在插入图片时，如果按照markdown的语法，使用本地路径会出现各种奇怪问题。同时，为了控</description>
+    </item>
+    
+    <item>
+      <title>Django入门和配置</title>
+      <link>http://blog.jasonleehere.com/posts/django%E5%85%A5%E9%97%A8%E5%92%8C%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 10 Nov 2022 13:50:11 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/django%E5%85%A5%E9%97%A8%E5%92%8C%E9%85%8D%E7%BD%AE/</guid>
+      <description>Django 是 python 的一个 web 后台框架。他的特点是大而全，因此本身命令和代码构架和原生 python 有较大区别，这篇文章是对 django 从入门到项目运行的学习记录。 常用命令 d django-admin startproject</description>
+    </item>
+    
+    <item>
+      <title>我对区块链学习过程的记录</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
+      <pubDate>Tue, 08 Nov 2022 12:26:30 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%8C%BA%E5%9D%97%E9%93%BE/</guid>
+      <description>从抽象到具体，从为什么创立区块链，到技术层面。一个掺杂我个人思考的记录。 为什么创立区块链？ 自由世界人民对自由更进一步的追求，用技术天然的可靠</description>
+    </item>
+    
+    <item>
+      <title>招聘系统面试状态爬虫</title>
+      <link>http://blog.jasonleehere.com/posts/moka%E6%8B%9B%E8%81%98%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E7%8A%B6%E6%80%81%E7%88%AC%E8%99%AB/</link>
+      <pubDate>Thu, 03 Nov 2022 21:26:48 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/moka%E6%8B%9B%E8%81%98%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E7%8A%B6%E6%80%81%E7%88%AC%E8%99%AB/</guid>
+      <description>这几天学python爬虫，又买了腾讯云服务器，找个项目练练手。找到了一个需求：对招聘进度做一个定时爬取，如果有变化，微信通知我。任务可以分为</description>
+    </item>
+    
+    <item>
+      <title>https协议</title>
+      <link>http://blog.jasonleehere.com/posts/https%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Mon, 31 Oct 2022 15:42:50 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/https%E5%8D%8F%E8%AE%AE/</guid>
+      <description>什么是公钥和私钥 为了增加http报文内容的安全性，需要对明文加密。公钥是一种加密规则，由服务器端创建，经过证书认证机构签名后发给客户端，客户</description>
+    </item>
+    
+    <item>
+      <title>js事件循环机制</title>
+      <link>http://blog.jasonleehere.com/posts/js%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6/</link>
+      <pubDate>Thu, 08 Sep 2022 09:59:46 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/js%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6/</guid>
+      <description>一个困扰我已久的问题： JS 是单线程的，在同一个时间只能做一件事情，那为什么浏览器可以同时执行异步任务呢？ 这是因为浏览器是多线程的，当 JS 需要执行</description>
+    </item>
+    
+    <item>
+      <title>函数的变量提升等</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87%E7%AD%89/</link>
+      <pubDate>Fri, 26 Aug 2022 23:04:24 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87%E7%AD%89/</guid>
+      <description>函数表达式和函数声明的区别 函数表达式与函数声明的最主要区别是函数名称（function name），在函数表达式中可省略它，从而创建匿名函数（</description>
+    </item>
+    
+    <item>
+      <title>string/array方法总结</title>
+      <link>http://blog.jasonleehere.com/posts/string-array%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Wed, 24 Aug 2022 14:55:55 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/string-array%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/</guid>
+      <description>string、array是非常常用的数据类型。对下面的常用方法进行总结。 string 说明：str表示某一个字符串 字符串长度：str.length 查找子</description>
+    </item>
+    
+    <item>
+      <title>vue项目打包后部署到腾讯云服务器的过程记录</title>
+      <link>http://blog.jasonleehere.com/posts/vue%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%90%8E%E9%83%A8%E7%BD%B2%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Thu, 18 Aug 2022 00:03:56 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/vue%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%90%8E%E9%83%A8%E7%BD%B2%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/</guid>
+      <description>跟着视频学的。首先记录一些简单的Linux命令。 文件操作 ls 查看当前文件夹下的内容 pwd 打印当前文件夹名称 cd 跳转 touch 若文件不存在，新建 mkdir 创建文件夹 rm</description>
+    </item>
+    
+    <item>
+      <title>跨域问题描述和解决方案</title>
+      <link>http://blog.jasonleehere.com/posts/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Wed, 17 Aug 2022 17:24:13 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description>什么是跨域 跨域是浏览器对js脚本和ajax请求做出的限制。不同源的js脚本获取对方的cookie，ajax无法发送跨域请求。 解决方案 CORS 在服务</description>
+    </item>
+    
+    <item>
+      <title>初学vue2踩坑记</title>
+      <link>http://blog.jasonleehere.com/posts/%E5%88%9D%E5%AD%A6vue2%E8%B8%A9%E5%9D%91%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Aug 2022 11:03:20 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/%E5%88%9D%E5%AD%A6vue2%E8%B8%A9%E5%9D%91%E8%AE%B0/</guid>
+      <description>&lt;p&gt;跟着 b 站黑马程序员的视频入门 vue，跟敲代码过程中，踩到一些坑，在这里记录一下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定义方法时，是&lt;code&gt;methods&lt;/code&gt;而不是&lt;code&gt;method&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>css从0开始</title>
+      <link>http://blog.jasonleehere.com/posts/css/</link>
+      <pubDate>Sat, 30 Jul 2022 10:55:52 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/css/</guid>
+      <description>&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
+&lt;p&gt;一直苦于css的内容繁多，潜意识回避。但是对于初级前端岗位，重现页面是基本功。所以，决定花几天时间，重学css。知乎上的&lt;a href=&#34;https://www.zhihu.com/question/383581311/answer/1114218936&#34;&gt;回答&lt;/a&gt;建议将css分为选择器、样式、盒模型、定位四个部分。那么我就按这个路线学一遍，并记录自己容易出错的地方。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>nodejs构建服务器</title>
+      <link>http://blog.jasonleehere.com/posts/nodejs%E6%9E%84%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <pubDate>Wed, 27 Jul 2022 21:31:25 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/nodejs%E6%9E%84%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description>&lt;h2 id=&#34;从nodejs服务器想到的&#34;&gt;从nodejs服务器想到的&lt;/h2&gt;
+&lt;p&gt;服务器的定义是，监听请求，处理请求和做出响应。除了nodejs外，其他语言也有对应的web server框架，比如java的tomcat。&lt;/p&gt;
+&lt;p&gt;用下列代码实现一个简单的服务器：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JS之Promise</title>
+      <link>http://blog.jasonleehere.com/posts/js%E4%B9%8Bpromise/</link>
+      <pubDate>Tue, 26 Jul 2022 17:58:45 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/js%E4%B9%8Bpromise/</guid>
+      <description>&lt;h2 id=&#34;为什么需要promise&#34;&gt;为什么需要promise&lt;/h2&gt;
+&lt;p&gt;首先，存在一次异步任务的需求。然后又有了多次异步任务的需求，而多次异步的书写存在函数瀑布问题，不利于阅读和维护：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>http://blog.jasonleehere.com/posts/hello-world/</link>
+      <pubDate>Tue, 26 Jul 2022 09:41:37 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/hello-world/</guid>
+      <description>记录一下本网站的建立过程 首先，本网站是一个静态博客，基于 GitHub pages 提供的免费服务器，域名在 Namesilo 上购买，页面管理器为基于 nodejs 的 hexo, 总花费￥ 6.72/year. 建站第一天，感</description>
+    </item>
+    
+  </channel>
+</rss>

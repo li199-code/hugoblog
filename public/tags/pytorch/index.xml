@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pytorch on JasonLee</title>
+    <link>http://blog.jasonleehere.com/tags/pytorch/</link>
+    <description>Recent content in pytorch on JasonLee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 23 May 2023 13:12:24 +0000</lastBuildDate><atom:link href="http://blog.jasonleehere.com/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pytorch tutorial 笔记&#43;注解</title>
+      <link>http://blog.jasonleehere.com/posts/pytorch-tutorial%E7%AC%94%E8%AE%B0-%E6%B3%A8%E8%A7%A3/</link>
+      <pubDate>Tue, 23 May 2023 13:12:24 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/pytorch-tutorial%E7%AC%94%E8%AE%B0-%E6%B3%A8%E8%A7%A3/</guid>
+      <description>前言 pytorch，一个熟悉又陌生的朋友。以前用到它时，常常是哪里不会查哪里；等过一阵子又忘记了用法还得重新查。虽然毕业论文课题用到了框架，</description>
+    </item>
+    
+    <item>
+      <title>pytorch装环境</title>
+      <link>http://blog.jasonleehere.com/posts/pytorch%E8%A3%85%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Sat, 01 Apr 2023 20:54:38 +0000</pubDate>
+      
+      <guid>http://blog.jasonleehere.com/posts/pytorch%E8%A3%85%E7%8E%AF%E5%A2%83/</guid>
+      <description>问题描述 跟李沐学AI，装环境时，发现无论是本地，还是切到colab，都出现环境问题。甚至还有奇葩的要求装gpu，但是conda返回的是cpu</description>
+    </item>
+    
+  </channel>
+</rss>
